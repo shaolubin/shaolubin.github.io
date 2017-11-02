@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>HEXO进阶</title>
-  <meta name="description" content="HEXO接近是最近有一些朋友提出的问题，然后我做了总结，如果你也在使用HEXO，不妨看看，应该会有些帮助。">
+  <title>通过github建博客</title>
+  <meta name="description" content="###突然想写个自己的博客！神百度过程~ 利用jekyll    http://jekyll.com.cn/docs/installation/ &lt;/br&gt; 模板网站       http://jekyllthemes.org/####开始喽！~#####需要安装ruby先安装 [Xcode]  ma...">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="HEXO进阶">
-  <meta name="twitter:description" content="HEXO接近是最近有一些朋友提出的问题，然后我做了总结，如果你也在使用HEXO，不妨看看，应该会有些帮助。">
+  <meta name="twitter:title" content="通过github建博客">
+  <meta name="twitter:description" content="###突然想写个自己的博客！神百度过程~ 利用jekyll    http://jekyll.com.cn/docs/installation/ &lt;/br&gt; 模板网站       http://jekyllthemes.org/####开始喽！~#####需要安装ruby先安装 [Xcode]  ma...">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="HEXO进阶">
-  <meta property="og:description" content="HEXO接近是最近有一些朋友提出的问题，然后我做了总结，如果你也在使用HEXO，不妨看看，应该会有些帮助。">
+  <meta property="og:title" content="通过github建博客">
+  <meta property="og:description" content="###突然想写个自己的博客！神百度过程~ 利用jekyll    http://jekyll.com.cn/docs/installation/ &lt;/br&gt; 模板网站       http://jekyllthemes.org/####开始喽！~#####需要安装ruby先安装 [Xcode]  ma...">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2016/06/HEXO_Advanced/">
+  <link rel="canonical" href="http://localhost:4000/2017/08/%E9%80%9A%E8%BF%87GitHub%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
   <link rel="alternate" type="application/rss+xml" title="邵路滨" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -146,10 +146,10 @@
         <div class="content-wrapper__inner">
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">HEXO进阶</h1>
+    <h1 class="post-title">通过github建博客</h1>
     <div class="post-meta">
       <img src="/images/calendar.png" width="20px"/> 
-      <time datetime="2016-06-12 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2016-06-12</time>  
+      <time datetime="2017-08-22 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2017-08-22</time>  
          
       <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
     </p>
@@ -157,86 +157,89 @@
   </header>
 
   <section class="post">
-    <p>HEXO接近是最近有一些朋友提出的问题，然后我做了总结，如果你也在使用HEXO，不妨看看，应该会有些帮助。</p>
-
-<ul>
-  <li>1、博客部署样式出问题了怎么办？</li>
-  <li>2、电脑重装或者误删了本地博客怎么办？</li>
-  <li>3、想使用两台电脑写博客怎么办？</li>
-  <li>4、为何使用百度搜不到我的博客？</li>
-</ul>
-
-<h3 id="使用jekyll解决前三个问题">使用Jekyll解决前三个问题。</h3>
-<p>不得不说 <code class="highlighter-rouge">Jekyll</code> 确实可以解决我上面三个问题, 因为 <code class="highlighter-rouge">Jekyll</code> 是直接把Markdown格式的文章直接放在github仓库里的, 相当于直接用git来管理博客了, <code class="highlighter-rouge">Github</code> 官方也很推荐 <code class="highlighter-rouge">Jekyll</code> 。 你可以先看下 <code class="highlighter-rouge">Jekyll</code> 搭建博客的<a href="voyagelab.github.io">voyagelab</a>, <a href="https://github.com/voyagelab/voyagelab.github.io">github地址</a>, 当然了这只是很普通的, Jekyll 也有很多主题可以选择的, 更详细的请看<a href="http://jekyll.bootcss.com/">Jekyll中文文档</a>、<a href="https://jekyllrb.com/">Jekyll英文文档</a>、<a href="http://jekyllthemes.org/">Jekyll主题列表</a>。
-在 <code class="highlighter-rouge">Jekyll</code> 上逛了一个星期的我又回到了 <code class="highlighter-rouge">Hexo</code> , 发现 目前 <code class="highlighter-rouge">Jekyll</code> 对主题和一些插件的支持相对 <code class="highlighter-rouge">Hexo</code> 来说, 没那么友好, 可能有一些其它的方法只是我没找到而已,关于 <code class="highlighter-rouge">Jekyll</code> 搭建博客就介绍到这, 如果有问题的话可以评论, 或者联系我。</p>
-
-<h3 id="使用hexo解决上面前三个问题">使用Hexo解决上面前三个问题</h3>
-<p>是的, 我大<code class="highlighter-rouge">Hexo</code>同样可以解决上面三个问题, 那就是使用git。关于如何使用 <code class="highlighter-rouge">Hexo</code> 搭建博客请看我另一篇文章<a href="http://www.baixin.io/2015/08/25/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">HEXO搭建个人博客</a>, 如果搭建的过程中出现了问题, 我们可以交流交流。现在我假设你已经能基本使用 <code class="highlighter-rouge">Hexo</code> 了, 接下来就看看如何来管理博客。</p>
-
-<h2 id="使用git管理博客">使用git管理博客</h2>
-<p><a href="https://github.com/leopardpan/Blog-Growing">Blog-Growing</a>是我管理博客的仓库地址。结构大致是:</p>
-
+    <p>###突然想写个自己的博客！神百度过程~
+ 利用jekyll    http://jekyll.com.cn/docs/installation/ &lt;/br&gt;
+ 模板网站       http://jekyllthemes.org/
+####开始喽！~
+#####需要安装ruby
+先安装 [Xcode]  mac系统直接app store里下载
+#####步骤1 － 安装 RVM
+	$ curl -L https://get.rvm.io | bash -s stable</p>
 <blockquote>
-  <p>– Blog-Growing   <br />
-　　|– .git   <br />
-　　|– .gitignore  <br />
-　　|– Hexo   <br />
-　　　　|   ..  <br />
-　　　　|   ..  <br />
-　　　　|   整个博客的配置信息</p>
+  <p>期间可能会问你sudo管理员密码，以及自动通过homebrew安装依赖包，等待一段时间后就可以成功安装好 RVM。&lt;/br&gt;
+然后，载入 RVM 环境（新开 Termal 就不用这么做了，会自动重新载入的）&lt;/br&gt;</p>
 </blockquote>
 
-<p>你可以把我的的<a href="https://github.com/leopardpan/Blog-Growing">Blog-Growing</a> clone下来, 看看一些基本配置是怎么配置的。需要提醒的是, <code class="highlighter-rouge">要把主题下的.git给删除掉</code> , 当然了你也可以使用 <code class="highlighter-rouge">git submodule</code> 来管理, 具体的管理方法我这里就不做多的介绍了, 想了解的话可以私信我。
-上面的过程基本做完后, 怎么来解决我开篇提的前三个问题了。</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ source ~/.rvm/scripts/rvm &gt;检查一下是否安装正确
 
-<h3 id="具体实现">具体实现:</h3>
-<p><strong>一：家里电脑使用博客</strong>      <br />
-　　建立git远端仓库管理博客,并使用家里的电脑把本地博客的配置推送到远端仓库。 <br />
-<strong>二：公司电脑使用博客</strong>       <br />
-　　到了公司只需要执行<code class="highlighter-rouge">sudo npm install -g hexo</code>,然后cd到你的博客目录下,如我cd 到Hexo目录下, 然后执行 <code class="highlighter-rouge">hexo server</code> 就可以在本地预览博客了。  <br />
-<strong>三：使用Git保存</strong>        <br />
-　　修改好博客后记得先使用git来提交下, 即使下次把博客的样式修改坏了, 也可以使用 <code class="highlighter-rouge">git reset --hard</code> 来回退。如: 我cd 到 <code class="highlighter-rouge">Blog-Growing</code> 目录下使用git提交。 <br />
-<strong>四：博客提交</strong>         <br />
-　　1、修改好的博客使用 <code class="highlighter-rouge">hexo d</code> 展示到博客页上。 <br />
-　　2、git push 整个本地博客。</p>
+$ rvm -v &gt;rvm 1.22.17 (stable) by Wayne E. Seguin &lt;wayneeseguin@gmail.com&gt;, Michal Papis &lt;mpapis@gmail.com&gt; [https://rvm.io/]
+</code></pre>
+</div>
 
-<p><strong>提示:</strong> 在这里 <code class="highlighter-rouge">git</code> 仅仅只是用户做博客的版本管理的, 博客的样式修改、基本部署还是使用 <code class="highlighter-rouge">hexo</code> 来操作的。</p>
+<p>#####步骤2 － 用 RVM 安装 Ruby 环境</p>
 
-<h2 id="让百度能搜索到你的博客">让百度能搜索到你的博客</h2>
+<p>列出已知的ruby版本&lt;/br&gt;</p>
 
-<h3 id="为什么要使用百度搜索">为什么要使用百度搜索？</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ rvm list known
+</code></pre>
+</div>
 
-<p>　　有人可能会说作为一个开发人员, 你不会用 <code class="highlighter-rouge">Google</code> 啊。 是的, Google是能搜到我们搭建在 <code class="highlighter-rouge">Github Page</code> 的博客, 会用<code class="highlighter-rouge">Google</code> 也是一个开发人员必备技能之一。但是, 我们生活在天朝, 所以百度还是总有会用到的时候, 或者是你想让更多的天朝人能搜到你。</p>
+<p>可以选择现有的rvm版本来进行安装（下面以rvm 2.0.0版本的安装为例）</p>
 
-<h3 id="为什么使用百度搜索不到-github-page-上的博客">为什么使用百度搜索不到 Github Page 上的博客？</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ rvm install 2.0.0
+</code></pre>
+</div>
 
-<p>有人联系过 Github Support 部门 , 给出大致的意思就是: 百度爬虫爬得太猛烈，已经对很多 Github 用户造成了问题。所以 Github 将禁止百度爬虫的爬取。</p>
+<p>同样继续等待漫长的下载，编译过程，完成以后，Ruby, Ruby Gems 就安装好了。
+另附：
+查询已经安装的ruby</p>
 
-<h3 id="如何让百度能搜索你的博客">如何让百度能搜索你的博客?</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ rvm list 　　 卸载一个已安装版本 
 
-<p>　　根据上面说的, 目前发现只是Github Page禁止了百度搜索, 所以让百度能搜索到你的博客还是有一些方法的。例如:</p>
-<ul>
-  <li>自己搞个VPS,博客部署在VPS上。</li>
-  <li>博客部署 <code class="highlighter-rouge">Coding.net</code> 上, <code class="highlighter-rouge">GitCafe</code>已经合并到 <code class="highlighter-rouge">Coding</code> 。
-我使用的是第二种方法, 博客部署在 <code class="highlighter-rouge">Coding.net</code> 上也相对简单些。</li>
-</ul>
+$ rvm remove 1.9.2
+</code></pre>
+</div>
 
-<h4 id="在coding上部署你的博客">在Coding上部署你的博客。</h4>
+<p>另附：
+查询已经安装的ruby</p>
 
-<p>　　Coding同样支持Hexo、Jekyll等博客的部署, Coding 跟Github还是挺像的,而且是中文。 同样的在Coding里面建一个项目,项目名字跟你的用户名一样,这里我就不啰嗦了, 说几个需要注意的地方:   <br />
-<strong>注意一:</strong>     <br />
-　　在<code class="highlighter-rouge">Coding Page</code> 上部署博客,需要把博客推送到<code class="highlighter-rouge">coding-pages </code> 分支上, 分支名字是固定的。  <br />
-<strong>注意二:</strong>   <br />
-　　<code class="highlighter-rouge">Coding Page</code> 不支持自定义CNAME, 你需要点击到Page模块,然后添加一个域名来绑定。</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ rvm list
+</code></pre>
+</div>
 
-<p>更详细的请看<a href="https://coding.net/help/doc/pages/index.html">Coding Pages 官网介绍</a>.</p>
+<p>卸载一个已安装版本</p>
 
-<p>参考文章:
-<a href="http://jerryzou.com/posts/feasibility-of-allowing-baiduSpider-for-Github-Pages/">解决 Github Pages 禁止百度爬虫的方法与可行性分析</a></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ rvm remove 1.9.2
+</code></pre>
+</div>
 
-<p><br /></p>
+<p>####Xcode中Command Line Tools安装方法</p>
+<blockquote>
+  <p>在终端中输入以下命令：xcode-select –install  ，按回车。&lt;/br&gt;
+这时会提示是否安装工具 直接点击 安装 即可,一直下一步</p>
+</blockquote>
 
-<p>转载请注明：<a href="http://baixin">潘柏信的博客</a> » <a href="http://baixin.io/2016/06/HEXO_Advanced/">点击阅读原文</a></p>
+<p>####jekyll基本用法
+	$ jekyll build</p>
+<blockquote>
+  <p>当前文件夹中的内容将会生成到 ./site 文件夹中。</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll build --destination &lt;destination&gt; &gt; 当前文件夹中的内容将会生成到目标文件夹&lt;destination&gt;中。
+
+$ jekyll build --source &lt;source&gt; --destination &lt;destination&gt; &gt; 指定源文件夹&lt;source&gt;中的内容将会生成到目标文件夹&lt;destination&gt;中。
+
+$ jekyll build --watch &gt; 当前文件夹中的内容将会生成到 ./site 文件夹中，查看改变，并且自动再生成。
+
+$ jekyll serve &gt; 一个开发服务器将会运行在 http://localhost:4000/
+
+$ jekyll serve --detach &gt; 功能和`jekyll serve`命令相同，但是会脱离终端在后台运行。&lt;/br&gt; &gt; 如果你想关闭服务器，可以使用`kill -9 1234`命令，"1234" 是进程号（PID）。&lt;/br&gt; &gt; 如果你找不到进程号，那么就用`ps aux | grep jekyll`命令来查看，然后关闭服务器。[更多](http://unixhelp.ed.ac.uk/shell/jobz5.html).
+
+$ jekyll serve --watch &gt; 和`jekyll serve`相同，但是会查看变更并且自动再生成。
+
+$ bundle exec jekyll serve &gt;生成url 访问url 就可以本地访问 Server address: http://127.0.0.1:4000
+</code></pre>
+</div>
 
 
   </section>
@@ -306,15 +309,10 @@
        <ul class="pager">
         
         <li class="previous">
-            <a href="/2016/06/Develop_Tool/" data-toggle="tooltip" data-placement="top" title="开发常用工具">上一篇：  <span>开发常用工具</span>
+            <a href="/2017/08/%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" data-toggle="tooltip" data-placement="top" title="博客的第一篇文章">上一篇：  <span>博客的第一篇文章</span>
             </a>
         </li>
         
-        
-        <li class="next">
-            <a href="/2016/07/MachineLearning_introduce/" data-toggle="tooltip" data-placement="top" title="机器学习入门（名词科普）">下一篇：  <span>机器学习入门（名词科普）</span>
-            </a>
-        </li>
         
     </ul>
 </section>
@@ -387,7 +385,7 @@
 
         <div class = "footer_div">  
            <p class="copyright text-muted">
-            Copyright &copy; 邵路滨 2017 Theme by <a href="http://baixin.io/">leopardpan</a> |
+            Copyright &copy; 邵路滨 2017
             <iframe
                 style="margin-left: 2px; margin-bottom:-5px;"
                 frameborder="0" scrolling="0" width="91px" height="20px"
