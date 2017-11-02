@@ -5,9 +5,39 @@
     <description>欢迎来到我的个人站~</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Aug 2017 16:58:19 +0800</pubDate>
-    <lastBuildDate>Tue, 22 Aug 2017 16:58:19 +0800</lastBuildDate>
+    <pubDate>Thu, 02 Nov 2017 16:58:13 +0800</pubDate>
+    <lastBuildDate>Thu, 02 Nov 2017 16:58:13 +0800</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
+    
+      <item>
+        <title>Php下命令行基本</title>
+        <description>&lt;p&gt;#####以下是 PHP 二进制文件（即 php.exe 程序）提供的命令行模式的选项参数，您随时可以通过 PHP -h 命令来查询这些参数。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;php -v     显示当前php版本
+php -m     显示当前php加载有效模块
+php -i     输出无html格式的phpinfo
+php --ini  输出当前php加载ini配置文件的数量、路径信息
+php -f     解析和执行 例：php -f  test.php
+php -r     运行php代码不加 &amp;lt;?php ?&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;####php -h
+&lt;img src=&quot;https://shaolubin.github.io/images/php/1509608525728.jpg&quot; alt=&quot;Mou icon&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;####说明&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://shaolubin.github.io/images/php/1509612828128.jpg&quot; alt=&quot;Mou icon&quot; /&gt;
+&lt;img src=&quot;https://shaolubin.github.io/images/php/1509612928449.jpg&quot; alt=&quot;Mou icon&quot; /&gt;
+&lt;img src=&quot;https://shaolubin.github.io/images/php/1509612984680.jpg&quot; alt=&quot;Mou icon&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 02 Nov 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/11/php%E4%B8%8B%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E6%9C%AC/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/11/php%E4%B8%8B%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E6%9C%AC/</guid>
+        
+        
+      </item>
     
       <item>
         <title>通过github建博客</title>
