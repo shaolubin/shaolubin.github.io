@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4513cdd4-9b71-424d-9159-f4a592235c62" name="Default" comment="vimium快捷键">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_posts/2017-11-03第一次接触安装扩展.md" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/readme/icon.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/readme/img4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/readme/img5.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/payimg/alipayimg.jpg" afterPath="$PROJECT_DIR$/images/payimg/alipayimg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/payimg/weipayimg.jpg" afterPath="$PROJECT_DIR$/images/payimg/weipayimg.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +21,8 @@
       <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_includes/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="59" column="46" lean-forward="true" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+            <state relative-caret-position="266">
+              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="e#2513#2519#0" expanded="true" />
               </folding>
@@ -271,7 +266,7 @@
       <updated>1503282317479</updated>
       <workItem from="1503282318850" duration="5750000" />
       <workItem from="1509608440246" duration="4732000" />
-      <workItem from="1516084292009" duration="1639000" />
+      <workItem from="1516084292009" duration="1697000" />
     </task>
     <task id="LOCAL-00001" summary="测试上传">
       <created>1509609984627</created>
@@ -301,11 +296,18 @@
       <option name="project" value="LOCAL" />
       <updated>1516084413101</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="更新支付二维码">
+      <created>1516085960380</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1516085960380</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12121000" />
+    <option name="totallyTimeSpent" value="12179000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1276" height="778" extended-state="6" />
@@ -341,7 +343,8 @@
     <MESSAGE value="测试表格" />
     <MESSAGE value="完成php命令行" />
     <MESSAGE value="vimium快捷键" />
-    <option name="LAST_COMMIT_MESSAGE" value="vimium快捷键" />
+    <MESSAGE value="更新支付二维码" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新支付二维码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -682,8 +685,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="59" column="46" lean-forward="true" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+        <state relative-caret-position="266">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="e#2513#2519#0" expanded="true" />
           </folding>
