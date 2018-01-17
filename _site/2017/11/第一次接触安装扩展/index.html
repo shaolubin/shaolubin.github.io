@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>Php下命令行基本</title>
-  <meta name="description" content="#####以下是 PHP 二进制文件（即 php.exe 程序）提供的命令行模式的选项参数，您随时可以通过 PHP -h 命令来查询这些参数。">
+  <title>第一次接触安装扩展</title>
+  <meta name="description" content="###第一次安VLD扩展```$ php -v     显示当前php版本$ php -m | grep vld$ php –ini 输出当前php加载ini配置文件的数量、路径信息$ sudo vim /etc/php/7.0/cli/php.ini$ cd /etc/php/7.0/mods-availabl...">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Php下命令行基本">
-  <meta name="twitter:description" content="#####以下是 PHP 二进制文件（即 php.exe 程序）提供的命令行模式的选项参数，您随时可以通过 PHP -h 命令来查询这些参数。">
+  <meta name="twitter:title" content="第一次接触安装扩展">
+  <meta name="twitter:description" content="###第一次安VLD扩展```$ php -v     显示当前php版本$ php -m | grep vld$ php –ini 输出当前php加载ini配置文件的数量、路径信息$ sudo vim /etc/php/7.0/cli/php.ini$ cd /etc/php/7.0/mods-availabl...">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Php下命令行基本">
-  <meta property="og:description" content="#####以下是 PHP 二进制文件（即 php.exe 程序）提供的命令行模式的选项参数，您随时可以通过 PHP -h 命令来查询这些参数。">
+  <meta property="og:title" content="第一次接触安装扩展">
+  <meta property="og:description" content="###第一次安VLD扩展```$ php -v     显示当前php版本$ php -m | grep vld$ php –ini 输出当前php加载ini配置文件的数量、路径信息$ sudo vim /etc/php/7.0/cli/php.ini$ cd /etc/php/7.0/mods-availabl...">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="/2017/11/php%E4%B8%8B%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E6%9C%AC/">
+  <link rel="canonical" href="/2017/11/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A5%E8%A7%A6%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95/">
   <link rel="alternate" type="application/rss+xml" title="邵路滨" href="/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -146,10 +146,10 @@
         <div class="content-wrapper__inner">
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">Php下命令行基本</h1>
+    <h1 class="post-title">第一次接触安装扩展</h1>
     <div class="post-meta">
       <img src="/images/calendar.png" width="20px"/> 
-      <time datetime="2017-11-02 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2017-11-02</time>  
+      <time datetime="2017-11-03 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2017-11-03</time>  
          
       <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
     </p>
@@ -157,26 +157,51 @@
   </header>
 
   <section class="post">
-    <p>#####以下是 PHP 二进制文件（即 php.exe 程序）提供的命令行模式的选项参数，您随时可以通过 PHP -h 命令来查询这些参数。</p>
+    <p>###第一次安VLD扩展</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ php -v     显示当前php版本
+$ php -m | grep vld
+$ php --ini 输出当前php加载ini配置文件的数量、路径信息
+$ sudo vim /etc/php/7.0/cli/php.ini
+$ cd /etc/php/7.0/mods-available/
+$ cp xsl.ini vld.ini
+$ history
+$ cd Code/vld/
+$ locate php-config
+$ ./configure --with-php-config=/usr/bin/php-config7.0 --enable-vld
+$ sudo pecl install vld-0.14.0
+$ make &amp;&amp; make install
+$ sudo phpenmod vld
+$ php -m | grep vld
 
-<div class="highlighter-rouge"><pre class="highlight"><code>php -v     显示当前php版本
-php -m     显示当前php加载有效模块
-php -i     输出无html格式的phpinfo
-php --ini  输出当前php加载ini配置文件的数量、路径信息
-php -f     解析和执行 例：php -f  test.php
-php -r     运行php代码不加 &lt;?php ?&gt;
+</code></pre>
+</div>
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>注：’</td>
+        <td>’ 通道符把php命令行和linux命令行 联在一起支执行</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<blockquote>
+  <p>grep 是搜索的意思</p>
+</blockquote>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1.	进入环境。(homestead)
+2.  查看php版本
+3.  编辑php.ini文件，激活扩展 加 extension==vld.so
+4.  进入 插件文件夹
+5.  *复制一份.ini文件 编辑vld.ini文件
+
 </code></pre>
 </div>
 
-<p>####php -h
-<img src="https://shaolubin.github.io/images/php/1509608525728.jpg" alt="Mou icon" /></p>
+<p>http://dezend.qiling.org/985.html</p>
 
-<p>####说明</p>
-
-<p><img src="https://shaolubin.github.io/images/php/1509612828128.jpg" alt="Mou icon" />
-<img src="https://shaolubin.github.io/images/php/1509612928449.jpg" alt="Mou icon" />
-<img src="https://shaolubin.github.io/images/php/1509612984680.jpg" alt="Mou icon" /></p>
-
+<p>完</p>
 
 
   </section>
@@ -246,13 +271,13 @@ php -r     运行php代码不加 &lt;?php ?&gt;
        <ul class="pager">
         
         <li class="previous">
-            <a href="/2017/08/%E9%80%9A%E8%BF%87GitHub%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-toggle="tooltip" data-placement="top" title="通过github建博客">上一篇：  <span>通过github建博客</span>
+            <a href="/2017/11/php%E4%B8%8B%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E6%9C%AC/" data-toggle="tooltip" data-placement="top" title="Php下命令行基本">上一篇：  <span>Php下命令行基本</span>
             </a>
         </li>
         
         
         <li class="next">
-            <a href="/2017/11/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A5%E8%A7%A6%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95/" data-toggle="tooltip" data-placement="top" title="第一次接触安装扩展">下一篇：  <span>第一次接触安装扩展</span>
+            <a href="/2018/01/vimium%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" data-toggle="tooltip" data-placement="top" title="Vimium常用快捷键">下一篇：  <span>Vimium常用快捷键</span>
             </a>
         </li>
         

@@ -5,9 +5,309 @@
     <description>欢迎来到我的个人站~</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 17 Jan 2018 19:23:52 +0800</pubDate>
-    <lastBuildDate>Wed, 17 Jan 2018 19:23:52 +0800</lastBuildDate>
+    <pubDate>Thu, 18 Jan 2018 00:55:38 +0800</pubDate>
+    <lastBuildDate>Thu, 18 Jan 2018 00:55:38 +0800</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
+    
+      <item>
+        <title>Vimium常用快捷键</title>
+        <description>&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Command&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Note&lt;/th&gt;
+&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;
+&lt;code&gt;j&lt;/code&gt;
+&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;向下滚动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;
+&lt;code&gt;k&lt;/code&gt;
+&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;向上滚动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;h&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;向左滚动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;l&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;向右滚动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gg&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;滚动到页面顶部&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;G&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;滚动到页面底部&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;zH&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;滚动到页面最左边&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;zL&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;滚动到页面最右边&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;r&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;重载页面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gs&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;查看页面源代码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;yy&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;复制当前 URL 到剪贴板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;打开剪贴板中的 URL 到当前标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;P&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;打开剪贴板中的 URL 到新标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gu&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;跳转到当前 URL 的上一层&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gU&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;跳转到当前 URL 的最高层&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;i&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;进入插入模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gi&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;焦点第一个文本输入框。使用 &lt;code&gt;tab&lt;/code&gt; 可以在文本输入框之间循环跳转&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;f&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;在当前标签页中打开一个链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;F&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;在新标签页中打开一个链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code&gt;m&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;创建新标记&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;使用 Vomnibar&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Command&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Note&lt;/th&gt;
+&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code&gt;o&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;打开 URl、书签或历史记录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code&gt;O&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;在新标签页中打开 URl、书签或历史记录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code&gt;T&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;搜索已打开的标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;b&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;打开书签&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;B&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;在新窗口中打开书签&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;ge&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;编辑当前 URL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gE&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;编辑当前 URL 并在新标签页中打开&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;使用查询&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Command&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Note&lt;/th&gt;
+&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;进入查询模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;n&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;下一个已查询到的值（页面内循环查找）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;N&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;上一个已查询到的值（页面内循环查找）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;导航历史&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Command&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Note&lt;/th&gt;
+&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;H&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;根据浏览历史后退一页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;L&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;根据浏览历史前进一页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;标签操纵&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Command&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Note&lt;/th&gt;
+&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;
+&lt;code&gt;K&lt;/code&gt;, &lt;code&gt;gt&lt;/code&gt;
+&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;向右移动一个标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;
+&lt;code&gt;J&lt;/code&gt;, &lt;code&gt;gT&lt;/code&gt;
+&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;向左移动一个标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;g0&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;移动到第一个标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;g$&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;移动到最后一个标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;t&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;创建一个新标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;yt&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;复制当前标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;x&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;关闭当前标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;X&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;恢复已关闭的标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;W&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;将标签页移动到新窗口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;向左移动标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;向右移动标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;其他&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Command&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;Note&lt;/th&gt;
+&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code&gt;?&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;显示帮助&lt;/td&gt;
+&lt;/tr&gt;&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        <pubDate>Mon, 15 Jan 2018 00:00:00 +0800</pubDate>
+        <link>/2018/01/vimium%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+        <guid isPermaLink="true">/2018/01/vimium%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>第一次接触安装扩展</title>
+        <description>&lt;p&gt;###第一次安VLD扩展&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ php -v     显示当前php版本
+$ php -m | grep vld
+$ php --ini 输出当前php加载ini配置文件的数量、路径信息
+$ sudo vim /etc/php/7.0/cli/php.ini
+$ cd /etc/php/7.0/mods-available/
+$ cp xsl.ini vld.ini
+$ history
+$ cd Code/vld/
+$ locate php-config
+$ ./configure --with-php-config=/usr/bin/php-config7.0 --enable-vld
+$ sudo pecl install vld-0.14.0
+$ make &amp;amp;&amp;amp; make install
+$ sudo phpenmod vld
+$ php -m | grep vld
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;注：’&lt;/td&gt;
+        &lt;td&gt;’ 通道符把php命令行和linux命令行 联在一起支执行&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;grep 是搜索的意思&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1.	进入环境。(homestead)
+2.  查看php版本
+3.  编辑php.ini文件，激活扩展 加 extension==vld.so
+4.  进入 插件文件夹
+5.  *复制一份.ini文件 编辑vld.ini文件
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;http://dezend.qiling.org/985.html&lt;/p&gt;
+
+&lt;p&gt;完&lt;/p&gt;
+</description>
+        <pubDate>Fri, 03 Nov 2017 00:00:00 +0800</pubDate>
+        <link>/2017/11/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A5%E8%A7%A6%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95/</link>
+        <guid isPermaLink="true">/2017/11/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8E%A5%E8%A7%A6%E5%AE%89%E8%A3%85%E6%89%A9%E5%B1%95/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Php下命令行基本</title>
