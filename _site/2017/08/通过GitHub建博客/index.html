@@ -220,22 +220,22 @@ $ rvm remove 1.9.2
 </blockquote>
 
 <p>####jekyll基本用法
-	$ jekyll build</p>
+	$ bundle exec jekyll build</p>
 <blockquote>
   <p>当前文件夹中的内容将会生成到 ./site 文件夹中。</p>
 </blockquote>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ jekyll build --destination &lt;destination&gt; &gt; 当前文件夹中的内容将会生成到目标文件夹&lt;destination&gt;中。
+<div class="highlighter-rouge"><pre class="highlight"><code>$ bundle exec jekyll build --destination &lt;destination&gt; &gt; 当前文件夹中的内容将会生成到目标文件夹&lt;destination&gt;中。
 
-$ jekyll build --source &lt;source&gt; --destination &lt;destination&gt; &gt; 指定源文件夹&lt;source&gt;中的内容将会生成到目标文件夹&lt;destination&gt;中。
+$ bundle exec jekyll build --source &lt;source&gt; --destination &lt;destination&gt; &gt; 指定源文件夹&lt;source&gt;中的内容将会生成到目标文件夹&lt;destination&gt;中。
 
-$ jekyll build --watch &gt; 当前文件夹中的内容将会生成到 ./site 文件夹中，查看改变，并且自动再生成。
+$ bundle exec jekyll build --watch &gt; 当前文件夹中的内容将会生成到 ./site 文件夹中，查看改变，并且自动再生成。
 
-$ jekyll serve &gt; 一个开发服务器将会运行在 http://localhost:4000/
+$ bundle exec jekyll serve &gt; 一个开发服务器将会运行在 http://localhost:4000/
 
-$ jekyll serve --detach &gt; 功能和`jekyll serve`命令相同，但是会脱离终端在后台运行。&lt;/br&gt; &gt; 如果你想关闭服务器，可以使用`kill -9 1234`命令，"1234" 是进程号（PID）。&lt;/br&gt; &gt; 如果你找不到进程号，那么就用`ps aux | grep jekyll`命令来查看，然后关闭服务器。[更多](http://unixhelp.ed.ac.uk/shell/jobz5.html).
+$ bundle exec jekyll serve --detach &gt; 功能和`jekyll serve`命令相同，但是会脱离终端在后台运行。&lt;/br&gt; &gt; 如果你想关闭服务器，可以使用`kill -9 1234`命令，"1234" 是进程号（PID）。&lt;/br&gt; &gt; 如果你找不到进程号，那么就用`ps aux | grep jekyll`命令来查看，然后关闭服务器。[更多](http://unixhelp.ed.ac.uk/shell/jobz5.html).
 
-$ jekyll serve --watch &gt; 和`jekyll serve`相同，但是会查看变更并且自动再生成。
+$ bundle exec jekyll serve --watch &gt; 和`jekyll serve`相同，但是会查看变更并且自动再生成。
 
 $ bundle exec jekyll serve &gt;生成url 访问url 就可以本地访问 Server address: http://127.0.0.1:4000
 </code></pre>
