@@ -5,8 +5,8 @@
     <description>欢迎来到我的个人站~</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Jan 2018 00:55:38 +0800</pubDate>
-    <lastBuildDate>Thu, 18 Jan 2018 00:55:38 +0800</lastBuildDate>
+    <pubDate>Thu, 18 Jan 2018 14:25:54 +0800</pubDate>
+    <lastBuildDate>Thu, 18 Jan 2018 14:25:54 +0800</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -18,87 +18,87 @@
 &lt;/tr&gt;&lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;
-&lt;code&gt;j&lt;/code&gt;
+&lt;td align=&quot;left&quot;&gt;
+&lt;code style=&quot;color:red&quot;&gt;j&lt;/code&gt;
 &lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;向下滚动&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;
-&lt;code&gt;k&lt;/code&gt;
+&lt;td align=&quot;left&quot;&gt;
+&lt;code style=&quot;color:red&quot;&gt;k&lt;/code&gt;
 &lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;向上滚动&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;h&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;h&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;向左滚动&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;l&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;l&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;向右滚动&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gg&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;gg&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;滚动到页面顶部&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;G&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;G&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;滚动到页面底部&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;zH&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;zH&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;滚动到页面最左边&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;zL&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;zL&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;滚动到页面最右边&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;r&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;r&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;重载页面&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gs&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;gs&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;查看页面源代码&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;yy&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;yy&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;复制当前 URL 到剪贴板&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;p&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;打开剪贴板中的 URL 到当前标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;P&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;P&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;打开剪贴板中的 URL 到新标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gu&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;gu&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;跳转到当前 URL 的上一层&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gU&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;gU&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;跳转到当前 URL 的最高层&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;i&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;i&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;进入插入模式&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gi&lt;/code&gt;&lt;/td&gt;
-&lt;td align=&quot;left&quot;&gt;焦点第一个文本输入框。使用 &lt;code&gt;tab&lt;/code&gt; 可以在文本输入框之间循环跳转&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;gi&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;焦点第一个文本输入框。使用 &lt;code style=&quot;color:red&quot;&gt;tab&lt;/code&gt; 可以在文本输入框之间循环跳转&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;f&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;f&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;在当前标签页中打开一个链接&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;F&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;F&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;在新标签页中打开一个链接&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;code&gt;m&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;m&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;创建新标记&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -111,31 +111,31 @@
 &lt;/tr&gt;&lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;code&gt;o&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;o&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;打开 URl、书签或历史记录&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;code&gt;O&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;O&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;在新标签页中打开 URl、书签或历史记录&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;code&gt;T&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;T&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;搜索已打开的标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;b&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;b&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;打开书签&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;B&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;B&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;在新窗口中打开书签&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;ge&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;ge&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;编辑当前 URL&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;gE&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;gE&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;编辑当前 URL 并在新标签页中打开&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -148,15 +148,15 @@
 &lt;/tr&gt;&lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;/&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;进入查询模式&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;n&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;n&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;下一个已查询到的值（页面内循环查找）&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;N&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;N&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;上一个已查询到的值（页面内循环查找）&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -169,11 +169,11 @@
 &lt;/tr&gt;&lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;H&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;H&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;根据浏览历史后退一页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;L&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;L&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;根据浏览历史前进一页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -186,51 +186,51 @@
 &lt;/tr&gt;&lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;
-&lt;code&gt;K&lt;/code&gt;, &lt;code&gt;gt&lt;/code&gt;
+&lt;td align=&quot;left&quot;&gt;
+&lt;code style=&quot;color:red&quot;&gt;K&lt;/code&gt;, &lt;code style=&quot;color:red&quot;&gt;gt&lt;/code&gt;
 &lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;向右移动一个标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;
-&lt;code&gt;J&lt;/code&gt;, &lt;code&gt;gT&lt;/code&gt;
+&lt;td align=&quot;left&quot;&gt;
+&lt;code style=&quot;color:red&quot;&gt;J&lt;/code&gt;, &lt;code style=&quot;color:red&quot;&gt;gT&lt;/code&gt;
 &lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;向左移动一个标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;g0&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;g0&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;移动到第一个标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;g$&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;g$&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;移动到最后一个标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;t&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;t&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;创建一个新标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;yt&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;yt&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;复制当前标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;x&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;x&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;关闭当前标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;X&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;X&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;恢复已关闭的标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;W&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;W&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;将标签页移动到新窗口&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;向左移动标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&quot;left&quot; style=&quot;color:red&quot;&gt;&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;向右移动标签页&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -242,9 +242,10 @@
 &lt;th align=&quot;left&quot;&gt;Note&lt;/th&gt;
 &lt;/tr&gt;&lt;/thead&gt;
 &lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&quot;left&quot;&gt;&lt;code&gt;?&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;&lt;code style=&quot;color:red&quot;&gt;?&lt;/code&gt;&lt;/td&gt;
 &lt;td align=&quot;left&quot;&gt;显示帮助&lt;/td&gt;
 &lt;/tr&gt;&lt;/tbody&gt;
+
 &lt;/table&gt;
 </description>
         <pubDate>Mon, 15 Jan 2018 00:00:00 +0800</pubDate>
@@ -404,22 +405,22 @@ $ rvm remove 1.9.2
 &lt;/blockquote&gt;
 
 &lt;p&gt;####jekyll基本用法
-	$ jekyll build&lt;/p&gt;
+	$ bundle exec jekyll build&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;当前文件夹中的内容将会生成到 ./site 文件夹中。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ jekyll build --destination &amp;lt;destination&amp;gt; &amp;gt; 当前文件夹中的内容将会生成到目标文件夹&amp;lt;destination&amp;gt;中。
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll build --destination &amp;lt;destination&amp;gt; &amp;gt; 当前文件夹中的内容将会生成到目标文件夹&amp;lt;destination&amp;gt;中。
 
-$ jekyll build --source &amp;lt;source&amp;gt; --destination &amp;lt;destination&amp;gt; &amp;gt; 指定源文件夹&amp;lt;source&amp;gt;中的内容将会生成到目标文件夹&amp;lt;destination&amp;gt;中。
+$ bundle exec jekyll build --source &amp;lt;source&amp;gt; --destination &amp;lt;destination&amp;gt; &amp;gt; 指定源文件夹&amp;lt;source&amp;gt;中的内容将会生成到目标文件夹&amp;lt;destination&amp;gt;中。
 
-$ jekyll build --watch &amp;gt; 当前文件夹中的内容将会生成到 ./site 文件夹中，查看改变，并且自动再生成。
+$ bundle exec jekyll build --watch &amp;gt; 当前文件夹中的内容将会生成到 ./site 文件夹中，查看改变，并且自动再生成。
 
-$ jekyll serve &amp;gt; 一个开发服务器将会运行在 http://localhost:4000/
+$ bundle exec jekyll serve &amp;gt; 一个开发服务器将会运行在 http://localhost:4000/
 
-$ jekyll serve --detach &amp;gt; 功能和`jekyll serve`命令相同，但是会脱离终端在后台运行。&amp;lt;/br&amp;gt; &amp;gt; 如果你想关闭服务器，可以使用`kill -9 1234`命令，&quot;1234&quot; 是进程号（PID）。&amp;lt;/br&amp;gt; &amp;gt; 如果你找不到进程号，那么就用`ps aux | grep jekyll`命令来查看，然后关闭服务器。[更多](http://unixhelp.ed.ac.uk/shell/jobz5.html).
+$ bundle exec jekyll serve --detach &amp;gt; 功能和`jekyll serve`命令相同，但是会脱离终端在后台运行。&amp;lt;/br&amp;gt; &amp;gt; 如果你想关闭服务器，可以使用`kill -9 1234`命令，&quot;1234&quot; 是进程号（PID）。&amp;lt;/br&amp;gt; &amp;gt; 如果你找不到进程号，那么就用`ps aux | grep jekyll`命令来查看，然后关闭服务器。[更多](http://unixhelp.ed.ac.uk/shell/jobz5.html).
 
-$ jekyll serve --watch &amp;gt; 和`jekyll serve`相同，但是会查看变更并且自动再生成。
+$ bundle exec jekyll serve --watch &amp;gt; 和`jekyll serve`相同，但是会查看变更并且自动再生成。
 
 $ bundle exec jekyll serve &amp;gt;生成url 访问url 就可以本地访问 Server address: http://127.0.0.1:4000
 &lt;/code&gt;&lt;/pre&gt;
