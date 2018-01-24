@@ -218,16 +218,23 @@ var_dump(strcmp($ab, $ac));
 var_dump(strlen($ab));  
     
 //结果：-1  4
-//解析：PHP认为不相等，而且长度是4 &gt;   strcmp — 二进制安全字符串比较。字符串对比长度strlen&lt;br&gt; 左&gt;右 返回: 大于长度值【&gt;0的int值】&lt;br&gt; 左&lt;dk 返回：小于长度值【&lt;0的int值负数】
+//解析：PHP认为不相等，而且长度是4
 </code></pre>
     </div>
   </li>
-  <li>
-    <p>原因可想而知，只要还是在len上面！C语言遇到【\0】已经结束了，不会在继续对比下去。</p>
-  </li>
 </ul>
 
-<h4 id="存取和修改字符串中的字符">存取和修改字符串中的字符</h4>
+<blockquote>
+  <p>strcmp — 二进制安全字符串比较。字符串对比长度strlen<br />
+左&gt;右 返回: 大于长度值【&gt;0的int值】<br />
+左&lt;右 返回: 小于长度值【&lt;0的int值负数】</p>
+</blockquote>
+
+<ul>
+  <li>原因可想而知，只要还是在len上面！C语言遇到【\0】已经结束了，不会在继续对比下去。</li>
+</ul>
+
+<h2 id="存取和修改字符串中的字符">存取和修改字符串中的字符</h2>
 <ul>
   <li>string 中的字符可以通过一个从 0 开始的下标，用类似 array 结构中的方括号包含对应的数字来访问和修改，比如 $str[42]。
     <div class="language-php highlighter-rouge"><pre class="highlight"><code>//通过[]和{}访问string
@@ -254,7 +261,7 @@ var_dump($str['aaa']);//报warning错，输出：string(1) "a"
   </li>
 </ul>
 
-<h4 id="php值转成string来保存几种方法串行化">PHP值转成string来保存几种方法【串行化】</h4>
+<h2 id="php值转成string来保存几种方法串行化">PHP值转成string来保存几种方法【串行化】</h2>
 <ol>
   <li>函数 serialize() 可以实现【序列化】</li>
   <li>函数 json_encode ()可以实现</li>
@@ -272,23 +279,24 @@ json_encode转成格式更通用一些</p>
   </li>
 </ul>
 
-<div class="language-php highlighter-rouge"><pre class="highlight"><code>$arr = [1,2,3,4];
-$str = var_export($arr);
-$str = '<span class="cp">&lt;?php</span> <span class="k">return</span> <span class="s1">'.$str;
-file_pubcontents('</span><span class="nx">text</span><span class="err">'</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span>
-
-<span class="k">echo</span> <span class="nv">$str</span><span class="p">;</span>
-<span class="c1">//输出
-</span><span class="k">array</span> <span class="p">(</span>
-  <span class="mi">0</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="mi">1</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span>
-  <span class="mi">2</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span>
-  <span class="mi">3</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span>
-<span class="p">);</span>
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>    $arr = [1,2,3,4];
+    $str = var_export($arr);
+    $str = '<span class="cp">&lt;?php</span> <span class="k">return</span> <span class="s1">'.$str;
+    file_pubcontents('</span><span class="nx">text</span><span class="err">'</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span>
+    
+    <span class="k">echo</span> <span class="nv">$str</span><span class="p">;</span>
+    
+    <span class="c1">// 输出
+</span>    <span class="k">array</span> <span class="p">(</span>
+      <span class="mi">0</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="mi">1</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="mi">2</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="mi">3</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="p">);</span>
 </code></pre>
 </div>
 
-<h4 id="字符编码">字符编码</h4>
+<h2 id="字符编码">字符编码</h2>
 
 <ul>
   <li><strong>字符集</strong>：抽象字符集合</li>
@@ -307,7 +315,7 @@ file_pubcontents('</span><span class="nx">text</span><span class="err">'</span><
   <li>如何判断utf和gbk</li>
 </ul>
 
-<h4 id="获取汉字unicode码">获取汉字Unicode码</h4>
+<h2 id="获取汉字unicode码">获取汉字Unicode码</h2>
 <div class="language-php highlighter-rouge"><pre class="highlight"><code>    $str='牛';
     echo getUnicode($str);//输出：725b
     function getUnicode($str){

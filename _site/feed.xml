@@ -5,22 +5,21 @@
     <description>欢迎来到我的个人站~</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 24 Jan 2018 16:19:09 +0800</pubDate>
-    <lastBuildDate>Wed, 24 Jan 2018 16:19:09 +0800</lastBuildDate>
+    <pubDate>Wed, 24 Jan 2018 17:01:33 +0800</pubDate>
+    <lastBuildDate>Wed, 24 Jan 2018 17:01:33 +0800</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
         <title>正则表达式</title>
-        <description>&lt;h2 id=&quot;正则表达式&quot;&gt;正则表达式&lt;/h2&gt;
-&lt;h4 id=&quot;正则基础&quot;&gt;正则基础&lt;/h4&gt;
+        <description>&lt;h3 id=&quot;正则基础&quot;&gt;正则基础&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;正则表达式：是由 &lt;strong&gt;元字符&lt;/strong&gt; 和 &lt;strong&gt;文本&lt;/strong&gt; 组成的&lt;/li&gt;
-  &lt;li&gt;常见元字符
-    &lt;blockquote&gt;
-      &lt;p&gt;正则表达式语言由两种基本字符类型组成：原义（正常）文本字符和元字符。元字符使正则表达式具有处理能力。元字符既可以是放在 [] 中的任意单个字符（如 [a] 表示匹配单个小写字符 a ），也可以是字符序列（如 [a-d] 表示匹配 a 、 b 、 c 、 d 之间的任意一个字符，而 \w 表示任意英文字母和数字及下划线）&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
+  &lt;li&gt;常见元字符&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;正则表达式语言由两种基本字符类型组成：原义（正常）文本字符和元字符。元字符使正则表达式具有处理能力。元字符既可以是放在 [] 中的任意单个字符（如 [a] 表示匹配单个小写字符 a ），也可以是字符序列（如 [a-d] 表示匹配 a 、 b 、 c 、 d 之间的任意一个字符，而 \w 表示任意英文字母和数字及下划线）&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;table&gt;
     &lt;thead&gt;
@@ -122,14 +121,14 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;限定符&quot;&gt;限定符&lt;/h4&gt;
+&lt;h3 id=&quot;限定符&quot;&gt;限定符&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;网上有很多解释说明
-    &lt;blockquote&gt;
-      &lt;p&gt;?、*、{n}、{n,}、{n,m}、+、\b、^、$&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
+  &lt;li&gt;网上有很多解释说明&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;?、*、{n}、{n,}、{n,m}、+、\b、^、$&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;table&gt;
     &lt;thead&gt;
@@ -216,46 +215,34 @@
 
 &lt;h5 id=&quot;说明&quot;&gt;说明：&lt;/h5&gt;
 &lt;ol&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;由于在正则表达式中“ \ ”、“ ? ”、“ * ”、“ ^ ”、“ $ ”、“ + ”、“（”、“）”、“&lt;/td&gt;
-          &lt;td&gt;”、“ { ”、“ [ ”等字符已经具有一定特殊意义，如果需要用它们的原始意义，则应该对它进行转义，例如希望在字符串中至少有一个“ \ ”，那么正则表达式应该这么写： \+ 。&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
+  &lt;li&gt;由于在正则表达式中” \ “、” ? “、” * “、” ^ “、” $ “、” + “、”（”、”）”、” | “、” { “、” [ “等字符已经具有一定特殊意义，如果需要用它们的原始意义，则应该对它进行转义，例如希望在字符串中至少有一个” \ “，那么正则表达式应该这么写： \+ 。&lt;/li&gt;
   &lt;li&gt;可以将多个元字符或者原义文本字符用括号括起来形成一个分组，比如 ^(13)[4-9]\d{8}$ 表示任意以 13 开头的移动手机号码。&lt;/li&gt;
   &lt;li&gt;另外对于中文字符的匹配是采用其对应的 Unicode 编码来匹配的，对于单个 Unicode 字符，如 \u4e00 表示汉字“一”， \u9fa5 表示汉字“龥”，在 Unicode 编码中这分别是所能表示的汉字的第一个和最后一个的 Unicode 编码，在 Unicode 编码中能表示 20901 个汉字。&lt;/li&gt;
   &lt;li&gt;关于 \b 的用法，它代表单词的开始或者结尾，以字符串“ 123a 345b 456 789d ”作为示例字符串，如果正则表达式是“ \b\d{3}\b ”，则仅能匹配 456 。
 可以使用“ | ”来表示或的关系，例如 [z|j|q] 表示匹配 z 、 j 、 q 之中的任意一个字母。&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h5 id=&quot;需要注意----这几个元字符其它元字符都可以在手册中查到&quot;&gt;需要注意: () [] {} 这几个元字符，其它元字符都可以在手册中查到&lt;/h5&gt;
+&lt;h3 id=&quot;需要注意----这几个元字符其它元字符都可以在手册中查到&quot;&gt;需要注意: () [] {} 这几个元字符，其它元字符都可以在手册中查到&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;**()**&lt;/code&gt; 是把括号内看做一个单一的组。
+  &lt;li&gt;&lt;strong&gt;&lt;code style=&quot;color:red;&quot;&gt;()&lt;/code&gt;&lt;/strong&gt; 是把括号内看做一个单一的组。
     &lt;blockquote&gt;
       &lt;p&gt;例如：要匹配URL是 .com .cn .net 。这时 () 是最好的选择 &lt;code style=&quot;color:red;&quot;&gt;(com|cn|net)&lt;/code&gt; 匹配到 com或cn或net&lt;/p&gt;
     &lt;/blockquote&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;**[]**&lt;/code&gt; 方括号是单个匹配的。与()括号有所不同&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;code style=&quot;color:red;&quot;&gt;[]&lt;/code&gt;&lt;/strong&gt; 方括号是单个匹配的。与()括号有所不同
+    &lt;blockquote&gt;
+      &lt;p&gt;例如：&lt;code style=&quot;color:red;&quot;&gt;[abc]&lt;/code&gt; 他匹配不是abc连续出现，而是只能其中一个，这样的规则匹配的是这个位置时，只能是abc其中一个。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;code style=&quot;color:red;&quot;&gt;{}&lt;/code&gt;&lt;/strong&gt; 大括号的用法很简单，就是匹配次数，它需要和其他有意义的正则表达式一起使用。
+    &lt;blockquote&gt;
+      &lt;p&gt;例如：&lt;code style=&quot;color:red;&quot;&gt;[a-c]{2}&lt;/code&gt;意思就是匹配a-c之间的一个字母出现且只出现两次；&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;例如：&lt;code style=&quot;color:red;&quot;&gt;[abc]&lt;/code&gt; 他匹配不是abc连续出现，而是只能其中一个，这样的规则匹配的是这个位置时，只能是abc其中一个。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;**{}**&lt;/code&gt; 大括号的用法很简单，就是匹配次数，它需要和其他有意义的正则表达式一起使用。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;例如：&lt;code style=&quot;color:red;&quot;&gt;[a-c]{2}&lt;/code&gt;意思就是匹配a-c之间的一个字母出现且只出现两次；&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;注意几个转义字符&quot;&gt;注意几个转义字符&lt;/h4&gt;
+&lt;h3 id=&quot;注意几个转义字符&quot;&gt;注意几个转义字符&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;tesh\\.php&lt;/code&gt; 匹配 tesh.php&lt;/li&gt;
   &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;c:\\\\windows&lt;/code&gt; 匹配 c:\windows&lt;/li&gt;
@@ -279,44 +266,14 @@
   &lt;li&gt;用echo分别用单引双引输出”\\\$“会输出什么&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;多选结构&quot;&gt;多选结构&lt;/h4&gt;
+&lt;h3 id=&quot;多选结构&quot;&gt;多选结构&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Windows98&lt;/td&gt;
-          &lt;td&gt;Windows2000&lt;/td&gt;
-          &lt;td&gt;WindosXP&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;^Windows98&lt;/td&gt;
-          &lt;td&gt;Windows2000&lt;/td&gt;
-          &lt;td&gt;WindowsXP$&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;Windows(98&lt;/td&gt;
-          &lt;td&gt;2000&lt;/td&gt;
-          &lt;td&gt;XP)&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
+  &lt;li&gt;Windows98|Windows2000|WindosXP&lt;/li&gt;
+  &lt;li&gt;^Windows98|Windows2000|WindowsXP$&lt;/li&gt;
+  &lt;li&gt;Windows(98|2000|XP)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;说明-1&quot;&gt;说明：&lt;/h5&gt;
+&lt;h4 id=&quot;说明-1&quot;&gt;说明：&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;元字符&lt;code style=&quot;color:red;&quot;&gt;|&lt;/code&gt; 是表达式之间的或，和[]的区别就是一个是表达式间的一个是字符间的。&lt;/p&gt;
@@ -340,7 +297,7 @@
 
 &lt;p&gt;&lt;code style=&quot;color:red;font-size:18px;&quot;&gt;多选结构可以包括很多字符，但不能超越括号的界限。&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;分组&quot;&gt;分组&lt;/h4&gt;
+&lt;h3 id=&quot;分组&quot;&gt;分组&lt;/h3&gt;
 
 &lt;table&gt;
     &lt;thead&gt;
@@ -417,7 +374,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;后向引用&quot;&gt;后向引用&lt;/h4&gt;
+&lt;h3 id=&quot;后向引用&quot;&gt;后向引用&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;后向引用&lt;/strong&gt;用于重复搜索前面某个分组匹配的文本。例如，\1 代表分组1匹配的文本。&lt;/li&gt;
   &lt;li&gt;
@@ -427,7 +384,7 @@
 &lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/BB7344ADEBB542C1A9EB9BFA97E1034B/3956&quot; alt=&quot;image&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;环视零宽断言&quot;&gt;环视【零宽断言】&lt;/h4&gt;
+&lt;h3 id=&quot;环视零宽断言&quot;&gt;环视【零宽断言】&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;顺序
     &lt;ul&gt;
@@ -453,7 +410,7 @@
   &lt;p&gt;这就很好理解了！&lt;code style=&quot;color:red&quot;&gt;?&lt;/code&gt; 指的就是某个被匹配的位置。在我理解所谓的’顺序’和’逆序’就是 &lt;strong&gt;位置&lt;/strong&gt;的左边或右边；&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&quot;示例&quot;&gt;示例&lt;/h5&gt;
+&lt;h4 id=&quot;示例&quot;&gt;示例&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;把1234567890变成1,234,567,890&lt;/p&gt;
@@ -471,7 +428,7 @@
 
 &lt;p&gt;&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/ABF30FBA4ED1467DADBA5C1A611F20AC/3991&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;贪婪与懒惰匹配优先与忽略优先&quot;&gt;贪婪与懒惰（匹配优先与忽略优先）&lt;/h4&gt;
+&lt;h3 id=&quot;贪婪与懒惰匹配优先与忽略优先&quot;&gt;贪婪与懒惰（匹配优先与忽略优先）&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;贪婪&lt;/strong&gt;是尽可能匹配&lt;strong&gt;多&lt;/strong&gt;的字符&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;懒惰&lt;/strong&gt;是尽可能匹配&lt;strong&gt;少&lt;/strong&gt;的字符&lt;/li&gt;
@@ -480,7 +437,7 @@
 &lt;p&gt;&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/D1B52AF893BF4D4493C1FA9633809818/4013&quot; alt=&quot;image&quot; /&gt;
 &lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/79741E81B2B840218861916132488F6B/4015&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;正则的引擎&quot;&gt;正则的引擎&lt;/h4&gt;
+&lt;h3 id=&quot;正则的引擎&quot;&gt;正则的引擎&lt;/h3&gt;
 &lt;ol&gt;
   &lt;li&gt;&lt;strong&gt;DFA&lt;/strong&gt;表达式主导&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;NFA&lt;/strong&gt;文本主导
@@ -494,7 +451,7 @@
 &lt;p&gt;&lt;code style=&quot;color:red;font-size:18px;&quot;&gt;DFA引擎则搜索更快一些。但是NFA以表达式为主导，更容易操纵，因此一般程序员更偏爱NFA引擎！
 &lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;如何判断当前程序使用的引擎&quot;&gt;如何判断当前程序使用的引擎&lt;/h4&gt;
+&lt;h3 id=&quot;如何判断当前程序使用的引擎&quot;&gt;如何判断当前程序使用的引擎&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;是否支持忽略优先量词和分组捕获？
     &lt;ul&gt;
@@ -504,12 +461,12 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;回溯&quot;&gt;回溯&lt;/h2&gt;
+&lt;h3 id=&quot;回溯&quot;&gt;回溯&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;可参考文章：http://blog.csdn.net/secretx/article/details/72844509&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;简单阐述回溯&quot;&gt;简单阐述回溯&lt;/h4&gt;
+&lt;h3 id=&quot;简单阐述回溯&quot;&gt;简单阐述回溯&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;表达式&lt;code style=&quot;color:red;&quot;&gt;/^(a*)ab/&lt;/code&gt;,匹配字符串aaaaab。
     &lt;ol&gt;
@@ -523,14 +480,14 @@
 &lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;从第3，4步可以看到，暂时的无法匹配并不会立即导致整体匹配失败。而是会从捕获组中“吐出”字符以尝试。这个“吐出”的过程就叫&lt;code style=&quot;color:red;&quot;&gt;**回溯**&lt;/code&gt;。&lt;/p&gt;
+  &lt;p&gt;从第3，4步可以看到，暂时的无法匹配并不会立即导致整体匹配失败。而是会从捕获组中“吐出”字符以尝试。这个“吐出”的过程就叫&lt;strong&gt;&lt;code style=&quot;color:red;&quot;&gt;回溯&lt;/code&gt;&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;回溯并不仅执行一次，而是会一直回溯到另一个极端。对于 &lt;code style=&quot;color:red;&quot;&gt;*&lt;/code&gt; 符号而言，就是匹配 0 次的情况。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&quot;简单阐述悲观回溯&quot;&gt;简单阐述悲观回溯&lt;/h4&gt;
+&lt;h3 id=&quot;简单阐述悲观回溯&quot;&gt;简单阐述悲观回溯&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;表达式&lt;code style=&quot;color:red;&quot;&gt;/^(a*)b/&lt;/code&gt;,匹配字符串aaaaa&lt;/li&gt;
 &lt;/ul&gt;
@@ -544,15 +501,10 @@
 &lt;/ol&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;可以看到，虽然我们可以一眼看出二者无法匹配。但正则表达式在执行时还要“傻傻的”逐一回溯所有可能性，才能确定最终结果。这个“傻傻的”回溯过程就叫&lt;code style=&quot;color:red;&quot;&gt;**悲观回溯**&lt;/code&gt;。&lt;/p&gt;
+  &lt;p&gt;可以看到，虽然我们可以一眼看出二者无法匹配。但正则表达式在执行时还要“傻傻的”逐一回溯所有可能性，才能确定最终结果。这个“傻傻的”回溯过程就叫&lt;strong&gt;&lt;code style=&quot;color:red;&quot;&gt;悲观回溯&lt;/code&gt;&lt;/strong&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;表达式优化&quot;&gt;表达式优化&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;看课件 60页&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;pcre的主要函数&quot;&gt;PCRE的主要函数&lt;/h2&gt;
+&lt;h3 id=&quot;pcre的主要函数&quot;&gt;PCRE的主要函数&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;preg_grep — 返回匹配模式的数组条目&lt;/li&gt;
   &lt;li&gt;preg_match — 执行一个正则表达式匹配&lt;/li&gt;
@@ -625,16 +577,23 @@ var_dump(strcmp($ab, $ac));
 var_dump(strlen($ab));  
     
 //结果：-1  4
-//解析：PHP认为不相等，而且长度是4 &amp;gt;   strcmp — 二进制安全字符串比较。字符串对比长度strlen&amp;lt;br&amp;gt; 左&amp;gt;右 返回: 大于长度值【&amp;gt;0的int值】&amp;lt;br&amp;gt; 左&amp;lt;dk 返回：小于长度值【&amp;lt;0的int值负数】
+//解析：PHP认为不相等，而且长度是4
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;原因可想而知，只要还是在len上面！C语言遇到【\0】已经结束了，不会在继续对比下去。&lt;/p&gt;
-  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;存取和修改字符串中的字符&quot;&gt;存取和修改字符串中的字符&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;strcmp — 二进制安全字符串比较。字符串对比长度strlen&lt;br /&gt;
+左&amp;gt;右 返回: 大于长度值【&amp;gt;0的int值】&lt;br /&gt;
+左&amp;lt;右 返回: 小于长度值【&amp;lt;0的int值负数】&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;原因可想而知，只要还是在len上面！C语言遇到【\0】已经结束了，不会在继续对比下去。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;存取和修改字符串中的字符&quot;&gt;存取和修改字符串中的字符&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;string 中的字符可以通过一个从 0 开始的下标，用类似 array 结构中的方括号包含对应的数字来访问和修改，比如 $str[42]。
     &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//通过[]和{}访问string
@@ -661,7 +620,7 @@ var_dump($str['aaa']);//报warning错，输出：string(1) &quot;a&quot;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;php值转成string来保存几种方法串行化&quot;&gt;PHP值转成string来保存几种方法【串行化】&lt;/h4&gt;
+&lt;h2 id=&quot;php值转成string来保存几种方法串行化&quot;&gt;PHP值转成string来保存几种方法【串行化】&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;函数 serialize() 可以实现【序列化】&lt;/li&gt;
   &lt;li&gt;函数 json_encode ()可以实现&lt;/li&gt;
@@ -679,23 +638,24 @@ json_encode转成格式更通用一些&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$arr = [1,2,3,4];
-$str = var_export($arr);
-$str = '&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.$str;
-file_pubcontents('&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//输出
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $arr = [1,2,3,4];
+    $str = var_export($arr);
+    $str = '&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.$str;
+    file_pubcontents('&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;// 输出
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;字符编码&quot;&gt;字符编码&lt;/h4&gt;
+&lt;h2 id=&quot;字符编码&quot;&gt;字符编码&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;字符集&lt;/strong&gt;：抽象字符集合&lt;/li&gt;
@@ -714,7 +674,7 @@ file_pubcontents('&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt
   &lt;li&gt;如何判断utf和gbk&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;获取汉字unicode码&quot;&gt;获取汉字Unicode码&lt;/h4&gt;
+&lt;h2 id=&quot;获取汉字unicode码&quot;&gt;获取汉字Unicode码&lt;/h2&gt;
 &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $str='牛';
     echo getUnicode($str);//输出：725b
     function getUnicode($str){

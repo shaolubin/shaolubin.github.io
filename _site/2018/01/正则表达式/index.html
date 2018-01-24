@@ -7,16 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <title>正则表达式</title>
-  <meta name="description" content="正则表达式正则基础  正则表达式：是由 元字符 和 文本 组成的  常见元字符          正则表达式语言由两种基本字符类型组成：原义（正常）文本字符和元字符。元字符使正则表达式具有处理能力。元字符既可以是放在 [] 中的任意单个字符（如 [a] 表示匹配单个小写字符 a ），也可以是字符序列（如 [a-d...">
+  <meta name="description" content="正则基础  正则表达式：是由 元字符 和 文本 组成的  常见元字符">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="正则表达式">
-  <meta name="twitter:description" content="正则表达式正则基础  正则表达式：是由 元字符 和 文本 组成的  常见元字符          正则表达式语言由两种基本字符类型组成：原义（正常）文本字符和元字符。元字符使正则表达式具有处理能力。元字符既可以是放在 [] 中的任意单个字符（如 [a] 表示匹配单个小写字符 a ），也可以是字符序列（如 [a-d...">
+  <meta name="twitter:description" content="正则基础  正则表达式：是由 元字符 和 文本 组成的  常见元字符">
   
   <meta property="og:type" content="article">
   <meta property="og:title" content="正则表达式">
-  <meta property="og:description" content="正则表达式正则基础  正则表达式：是由 元字符 和 文本 组成的  常见元字符          正则表达式语言由两种基本字符类型组成：原义（正常）文本字符和元字符。元字符使正则表达式具有处理能力。元字符既可以是放在 [] 中的任意单个字符（如 [a] 表示匹配单个小写字符 a ），也可以是字符序列（如 [a-d...">
+  <meta property="og:description" content="正则基础  正则表达式：是由 元字符 和 文本 组成的  常见元字符">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -167,16 +167,15 @@
   </header>
 
   <section class="post">
-    <h2 id="正则表达式">正则表达式</h2>
-<h4 id="正则基础">正则基础</h4>
+    <h3 id="正则基础">正则基础</h3>
 <ul>
   <li>正则表达式：是由 <strong>元字符</strong> 和 <strong>文本</strong> 组成的</li>
-  <li>常见元字符
-    <blockquote>
-      <p>正则表达式语言由两种基本字符类型组成：原义（正常）文本字符和元字符。元字符使正则表达式具有处理能力。元字符既可以是放在 [] 中的任意单个字符（如 [a] 表示匹配单个小写字符 a ），也可以是字符序列（如 [a-d] 表示匹配 a 、 b 、 c 、 d 之间的任意一个字符，而 \w 表示任意英文字母和数字及下划线）</p>
-    </blockquote>
-  </li>
+  <li>常见元字符</li>
 </ul>
+
+<blockquote>
+  <p>正则表达式语言由两种基本字符类型组成：原义（正常）文本字符和元字符。元字符使正则表达式具有处理能力。元字符既可以是放在 [] 中的任意单个字符（如 [a] 表示匹配单个小写字符 a ），也可以是字符序列（如 [a-d] 表示匹配 a 、 b 、 c 、 d 之间的任意一个字符，而 \w 表示任意英文字母和数字及下划线）</p>
+</blockquote>
 
 <table>
     <thead>
@@ -278,14 +277,14 @@
   </li>
 </ul>
 
-<h4 id="限定符">限定符</h4>
+<h3 id="限定符">限定符</h3>
 <ul>
-  <li>网上有很多解释说明
-    <blockquote>
-      <p>?、*、{n}、{n,}、{n,m}、+、\b、^、$</p>
-    </blockquote>
-  </li>
+  <li>网上有很多解释说明</li>
 </ul>
+
+<blockquote>
+  <p>?、*、{n}、{n,}、{n,m}、+、\b、^、$</p>
+</blockquote>
 
 <table>
     <thead>
@@ -372,46 +371,34 @@
 
 <h5 id="说明">说明：</h5>
 <ol>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>由于在正则表达式中“ \ ”、“ ? ”、“ * ”、“ ^ ”、“ $ ”、“ + ”、“（”、“）”、“</td>
-          <td>”、“ { ”、“ [ ”等字符已经具有一定特殊意义，如果需要用它们的原始意义，则应该对它进行转义，例如希望在字符串中至少有一个“ \ ”，那么正则表达式应该这么写： \+ 。</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li>由于在正则表达式中” \ “、” ? “、” * “、” ^ “、” $ “、” + “、”（”、”）”、” | “、” { “、” [ “等字符已经具有一定特殊意义，如果需要用它们的原始意义，则应该对它进行转义，例如希望在字符串中至少有一个” \ “，那么正则表达式应该这么写： \+ 。</li>
   <li>可以将多个元字符或者原义文本字符用括号括起来形成一个分组，比如 ^(13)[4-9]\d{8}$ 表示任意以 13 开头的移动手机号码。</li>
   <li>另外对于中文字符的匹配是采用其对应的 Unicode 编码来匹配的，对于单个 Unicode 字符，如 \u4e00 表示汉字“一”， \u9fa5 表示汉字“龥”，在 Unicode 编码中这分别是所能表示的汉字的第一个和最后一个的 Unicode 编码，在 Unicode 编码中能表示 20901 个汉字。</li>
   <li>关于 \b 的用法，它代表单词的开始或者结尾，以字符串“ 123a 345b 456 789d ”作为示例字符串，如果正则表达式是“ \b\d{3}\b ”，则仅能匹配 456 。
 可以使用“ | ”来表示或的关系，例如 [z|j|q] 表示匹配 z 、 j 、 q 之中的任意一个字母。</li>
 </ol>
 
-<h5 id="需要注意----这几个元字符其它元字符都可以在手册中查到">需要注意: () [] {} 这几个元字符，其它元字符都可以在手册中查到</h5>
+<h3 id="需要注意----这几个元字符其它元字符都可以在手册中查到">需要注意: () [] {} 这几个元字符，其它元字符都可以在手册中查到</h3>
 
 <ul>
-  <li><code style="color:red;">**()**</code> 是把括号内看做一个单一的组。
+  <li><strong><code style="color:red;">()</code></strong> 是把括号内看做一个单一的组。
     <blockquote>
       <p>例如：要匹配URL是 .com .cn .net 。这时 () 是最好的选择 <code style="color:red;">(com|cn|net)</code> 匹配到 com或cn或net</p>
     </blockquote>
   </li>
-  <li><code style="color:red;">**[]**</code> 方括号是单个匹配的。与()括号有所不同</li>
+  <li><strong><code style="color:red;">[]</code></strong> 方括号是单个匹配的。与()括号有所不同
+    <blockquote>
+      <p>例如：<code style="color:red;">[abc]</code> 他匹配不是abc连续出现，而是只能其中一个，这样的规则匹配的是这个位置时，只能是abc其中一个。</p>
+    </blockquote>
+  </li>
+  <li><strong><code style="color:red;">{}</code></strong> 大括号的用法很简单，就是匹配次数，它需要和其他有意义的正则表达式一起使用。
+    <blockquote>
+      <p>例如：<code style="color:red;">[a-c]{2}</code>意思就是匹配a-c之间的一个字母出现且只出现两次；</p>
+    </blockquote>
+  </li>
 </ul>
 
-<blockquote>
-  <p>例如：<code style="color:red;">[abc]</code> 他匹配不是abc连续出现，而是只能其中一个，这样的规则匹配的是这个位置时，只能是abc其中一个。</p>
-</blockquote>
-
-<ul>
-  <li><code style="color:red;">**{}**</code> 大括号的用法很简单，就是匹配次数，它需要和其他有意义的正则表达式一起使用。</li>
-</ul>
-
-<blockquote>
-  <p>例如：<code style="color:red;">[a-c]{2}</code>意思就是匹配a-c之间的一个字母出现且只出现两次；</p>
-</blockquote>
-
-<h4 id="注意几个转义字符">注意几个转义字符</h4>
+<h3 id="注意几个转义字符">注意几个转义字符</h3>
 <ol>
   <li><code style="color:red;">tesh\\.php</code> 匹配 tesh.php</li>
   <li><code style="color:red;">c:\\\\windows</code> 匹配 c:\windows</li>
@@ -435,44 +422,14 @@
   <li>用echo分别用单引双引输出”\\\$“会输出什么</li>
 </ul>
 
-<h4 id="多选结构">多选结构</h4>
+<h3 id="多选结构">多选结构</h3>
 <ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>Windows98</td>
-          <td>Windows2000</td>
-          <td>WindosXP</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>^Windows98</td>
-          <td>Windows2000</td>
-          <td>WindowsXP$</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>Windows(98</td>
-          <td>2000</td>
-          <td>XP)</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
+  <li>Windows98|Windows2000|WindosXP</li>
+  <li>^Windows98|Windows2000|WindowsXP$</li>
+  <li>Windows(98|2000|XP)</li>
 </ul>
 
-<h5 id="说明-1">说明：</h5>
+<h4 id="说明-1">说明：</h4>
 <ul>
   <li>
     <p>元字符<code style="color:red;">|</code> 是表达式之间的或，和[]的区别就是一个是表达式间的一个是字符间的。</p>
@@ -496,7 +453,7 @@
 
 <p><code style="color:red;font-size:18px;">多选结构可以包括很多字符，但不能超越括号的界限。</code></p>
 
-<h4 id="分组">分组</h4>
+<h3 id="分组">分组</h3>
 
 <table>
     <thead>
@@ -573,7 +530,7 @@
   </li>
 </ul>
 
-<h4 id="后向引用">后向引用</h4>
+<h3 id="后向引用">后向引用</h3>
 <ul>
   <li><strong>后向引用</strong>用于重复搜索前面某个分组匹配的文本。例如，\1 代表分组1匹配的文本。</li>
   <li>
@@ -583,7 +540,7 @@
 <img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/BB7344ADEBB542C1A9EB9BFA97E1034B/3956" alt="image" /></li>
 </ul>
 
-<h4 id="环视零宽断言">环视【零宽断言】</h4>
+<h3 id="环视零宽断言">环视【零宽断言】</h3>
 <ol>
   <li>顺序
     <ul>
@@ -609,7 +566,7 @@
   <p>这就很好理解了！<code style="color:red">?</code> 指的就是某个被匹配的位置。在我理解所谓的’顺序’和’逆序’就是 <strong>位置</strong>的左边或右边；</p>
 </blockquote>
 
-<h5 id="示例">示例</h5>
+<h4 id="示例">示例</h4>
 <ul>
   <li>
     <p>把1234567890变成1,234,567,890</p>
@@ -627,7 +584,7 @@
 
 <p><img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/ABF30FBA4ED1467DADBA5C1A611F20AC/3991" alt="image" /></p>
 
-<h4 id="贪婪与懒惰匹配优先与忽略优先">贪婪与懒惰（匹配优先与忽略优先）</h4>
+<h3 id="贪婪与懒惰匹配优先与忽略优先">贪婪与懒惰（匹配优先与忽略优先）</h3>
 <ul>
   <li><strong>贪婪</strong>是尽可能匹配<strong>多</strong>的字符</li>
   <li><strong>懒惰</strong>是尽可能匹配<strong>少</strong>的字符</li>
@@ -636,7 +593,7 @@
 <p><img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/D1B52AF893BF4D4493C1FA9633809818/4013" alt="image" />
 <img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/79741E81B2B840218861916132488F6B/4015" alt="image" /></p>
 
-<h4 id="正则的引擎">正则的引擎</h4>
+<h3 id="正则的引擎">正则的引擎</h3>
 <ol>
   <li><strong>DFA</strong>表达式主导</li>
   <li><strong>NFA</strong>文本主导
@@ -650,7 +607,7 @@
 <p><code style="color:red;font-size:18px;">DFA引擎则搜索更快一些。但是NFA以表达式为主导，更容易操纵，因此一般程序员更偏爱NFA引擎！
 </code></p>
 
-<h4 id="如何判断当前程序使用的引擎">如何判断当前程序使用的引擎</h4>
+<h3 id="如何判断当前程序使用的引擎">如何判断当前程序使用的引擎</h3>
 <ul>
   <li>是否支持忽略优先量词和分组捕获？
     <ul>
@@ -660,12 +617,12 @@
   </li>
 </ul>
 
-<h2 id="回溯">回溯</h2>
+<h3 id="回溯">回溯</h3>
 <ul>
   <li>可参考文章：http://blog.csdn.net/secretx/article/details/72844509</li>
 </ul>
 
-<h4 id="简单阐述回溯">简单阐述回溯</h4>
+<h3 id="简单阐述回溯">简单阐述回溯</h3>
 <ul>
   <li>表达式<code style="color:red;">/^(a*)ab/</code>,匹配字符串aaaaab。
     <ol>
@@ -679,14 +636,14 @@
 </ul>
 
 <blockquote>
-  <p>从第3，4步可以看到，暂时的无法匹配并不会立即导致整体匹配失败。而是会从捕获组中“吐出”字符以尝试。这个“吐出”的过程就叫<code style="color:red;">**回溯**</code>。</p>
+  <p>从第3，4步可以看到，暂时的无法匹配并不会立即导致整体匹配失败。而是会从捕获组中“吐出”字符以尝试。这个“吐出”的过程就叫<strong><code style="color:red;">回溯</code></strong>。</p>
 </blockquote>
 
 <blockquote>
   <p>回溯并不仅执行一次，而是会一直回溯到另一个极端。对于 <code style="color:red;">*</code> 符号而言，就是匹配 0 次的情况。</p>
 </blockquote>
 
-<h4 id="简单阐述悲观回溯">简单阐述悲观回溯</h4>
+<h3 id="简单阐述悲观回溯">简单阐述悲观回溯</h3>
 <ul>
   <li>表达式<code style="color:red;">/^(a*)b/</code>,匹配字符串aaaaa</li>
 </ul>
@@ -700,15 +657,10 @@
 </ol>
 
 <blockquote>
-  <p>可以看到，虽然我们可以一眼看出二者无法匹配。但正则表达式在执行时还要“傻傻的”逐一回溯所有可能性，才能确定最终结果。这个“傻傻的”回溯过程就叫<code style="color:red;">**悲观回溯**</code>。</p>
+  <p>可以看到，虽然我们可以一眼看出二者无法匹配。但正则表达式在执行时还要“傻傻的”逐一回溯所有可能性，才能确定最终结果。这个“傻傻的”回溯过程就叫<strong><code style="color:red;">悲观回溯</code></strong>。</p>
 </blockquote>
 
-<h2 id="表达式优化">表达式优化</h2>
-<ul>
-  <li>看课件 60页</li>
-</ul>
-
-<h2 id="pcre的主要函数">PCRE的主要函数</h2>
+<h3 id="pcre的主要函数">PCRE的主要函数</h3>
 <ul>
   <li>preg_grep — 返回匹配模式的数组条目</li>
   <li>preg_match — 执行一个正则表达式匹配</li>
