@@ -5,9 +5,734 @@
     <description>欢迎来到我的个人站~</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Jan 2018 14:29:19 +0800</pubDate>
-    <lastBuildDate>Thu, 18 Jan 2018 14:29:19 +0800</lastBuildDate>
+    <pubDate>Wed, 24 Jan 2018 15:55:28 +0800</pubDate>
+    <lastBuildDate>Wed, 24 Jan 2018 15:55:28 +0800</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
+    
+      <item>
+        <title>字符串与正则表达式</title>
+        <description>&lt;h2 id=&quot;字符串&quot;&gt;字符串&lt;/h2&gt;
+
+&lt;h4 id=&quot;单引号和双引号的区别是&quot;&gt;单引号和双引号的区别是？&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;双引号会解析内部变量转义等，单引号只会把它当做普通字符，因此单引比双引效率高。&lt;/p&gt;
+
+    &lt;p&gt;echo “this is a pen \n,this is a pen.”;//输出：解析换行
+echo ‘this is a pen, \nthis is a pen.’;//输出：this is a pen, \nthis is a pen.
+echo “\101\102”;//输出：AB
+echo ‘\x41\x42’;//输出：\x41\x42&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;常见函数是单字节处理方式&quot;&gt;常见函数是单字节处理方式&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;可以用[]或{}来访问某个字符&lt;/li&gt;
+  &lt;li&gt;一个字符用一个字节标识,是一个ascii码,存储在内存中也是一个字节，双字节字符串就是unicode字符串,不论数字,英文,还是其他字符都用2个字节标识,大大提高了字符串的兼容性。Unicode（统一码、万国码、单一码）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;php字符串是二进制安全&quot;&gt;PHP字符串是二进制安全&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;PHP是基于C语言写的。在C语言里【\0】相当与字符串的结束。PHP会通过len来检测字符串长度。如下例&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#底层C语言表示PHP字符串
+struct{
+    char *val;
+    int  len;
+}str;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;举例说明&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//C语言中
+main(){  
+    char ab[] = &quot;aa\0b&quot;;  
+    char ac[] = &quot;aa\0c&quot;;  
+    printf(&quot;%d\n&quot;, strcmp(ab, ac));  
+    printf(&quot;%d\n&quot;, strlen(ab));  
+ } 
+     
+//结果：0   2
+//解析：C语言认为ab和ac相等的，而且长度是2
+
+//PHP中
+$ab = &quot;aa\0b&quot;;   
+$ac = &quot;aa\0c&quot;;  
+var_dump(strcmp($ab, $ac));  
+var_dump(strlen($ab));  
+    
+//结果：-1  4
+//解析：PHP认为不相等，而且长度是4 &amp;gt;   strcmp — 二进制安全字符串比较。字符串对比长度strlen&amp;lt;br&amp;gt; 左&amp;gt;右 返回: 大于长度值【&amp;gt;0的int值】&amp;lt;br&amp;gt; 左&amp;lt;dk 返回：小于长度值【&amp;lt;0的int值负数】
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;原因可想而知，只要还是在len上面！C语言遇到【\0】已经结束了，不会在继续对比下去。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;存取和修改字符串中的字符&quot;&gt;存取和修改字符串中的字符&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;string 中的字符可以通过一个从 0 开始的下标，用类似 array 结构中的方括号包含对应的数字来访问和修改，比如 $str[42]。
+    &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//通过[]和{}访问string
+$str = &quot;abcdefg&quot;;
+    
+var_dump($str{0});//输出string(1) &quot;a&quot;
+var_dump($str[1]);//输出string(1) &quot;b&quot;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;用超出字符串长度的下标写入将会拉长该字符串并以空格填充。
+    &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$str     = 'a';
+$str[10] = 'b';
+//输出string(11) &quot;a         b&quot;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;非整数类型下标会被转换成整数。非法下标类型会产生一个 E_NOTICE 级别错误
+    &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$str     = 'abcdef';
+var_dump($str[-2]);//输出string(1) &quot;e&quot;
+var_dump($str['aaa']);//报warning错，输出：string(1) &quot;a&quot;
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;php值转成string来保存几种方法串行化&quot;&gt;PHP值转成string来保存几种方法【串行化】&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;函数 serialize() 可以实现【序列化】&lt;/li&gt;
+  &lt;li&gt;函数 json_encode ()可以实现&lt;/li&gt;
+  &lt;li&gt;函数 var_export($items, true);&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;常用到json_encode()。
+    &lt;blockquote&gt;
+      &lt;p&gt;serialize和json_encode对比 &lt;br /&gt;
+serialize可以转对象，unserizlize反序列化能直接生成对象
+json_encode相对转的快一点，但不明显。
+json_encode转成格式更通用一些&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$arr = [1,2,3,4];
+$str = var_export($arr);
+$str = '&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'.$str;
+file_pubcontents('&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//输出
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;字符编码&quot;&gt;字符编码&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;字符集&lt;/strong&gt;：抽象字符集合&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;字符编码&lt;/strong&gt;：二进制的数字来对应字符集的字符&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ASCLL&lt;/strong&gt;： 使用7位，表示一个字符，共128字符&lt;/li&gt;
+  &lt;li&gt;在mysql中 Latin1 是 ISO-8859-1 的别名&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Unicode字符集&lt;/strong&gt;，UTF-32/UTF-16/UTF-8是三种编码方案&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;GB2312字符集&lt;/strong&gt;：一个汉字用两个字节表示，每个字节只能有94个编码。双七位实际能够表示的字数是：94×94＝8836个。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;UTF-8中汉字中占三个字节&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ASCLL：https://baike.baidu.com/item/ASCII/309296?fr=aladdin&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;unicode：https://baike.baidu.com/item/Unicode%E7%A0%81/7704811?fr=aladdin&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;如何判断utf和gbk&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;获取汉字unicode码&quot;&gt;获取汉字Unicode码&lt;/h4&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $str='牛';
+    echo getUnicode($str);//输出：725b
+    function getUnicode($str){
+        $bin='';
+        $bin.=substr(decbin(ord($str[0])),4);
+        $bin.=substr(decbin(ord($str[1])),2);
+        $bin.=substr(decbin(ord($str[2])),2);
+        return dechex(bindec($bin));
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;自总结&quot;&gt;自总结&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;字符最小单位【位(bit)】，只有0和1,代表着低电和高电压。字节是由8个位组成，unicode为每个字符设定了唯一的二进制编码！在通过不同的字符编码规则显示相就不字符。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;正则表达式&quot;&gt;正则表达式&lt;/h2&gt;
+&lt;h4 id=&quot;正则基础&quot;&gt;正则基础&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;正则表达式：是由 &lt;strong&gt;元字符&lt;/strong&gt; 和 &lt;strong&gt;文本&lt;/strong&gt; 组成的&lt;/li&gt;
+  &lt;li&gt;常见元字符
+    &lt;blockquote&gt;
+      &lt;p&gt;正则表达式语言由两种基本字符类型组成：原义（正常）文本字符和元字符。元字符使正则表达式具有处理能力。元字符既可以是放在 [] 中的任意单个字符（如 [a] 表示匹配单个小写字符 a ），也可以是字符序列（如 [a-d] 表示匹配 a 、 b 、 c 、 d 之间的任意一个字符，而 \w 表示任意英文字母和数字及下划线）&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th align=&quot;left&quot;&gt;元字符&lt;/th&gt;
+            &lt;th align=&quot;left&quot;&gt;解释&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;.&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配除换行符以外的任意字符
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;\w&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配字母或数字
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;\s&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配任意的空白符
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;\d&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配数字
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;\b&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配单词的开始或结束
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;^&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配字符串的开始
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;$&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配字符串的结束
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;\xxx&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                查找以八进制数 xxx 规定的字符
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;\xdd&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                查找以十六进制数 dd 规定的字符
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;\uxxxx&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                查找以十六进制数 xxxx 规定的 Unicode 字符
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;元字符表：http://tool.oschina.net/uploads/apidocs/jquery/regexp.html&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;正则测试：http://regex.zjmainstay.cn&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;限定符&quot;&gt;限定符&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;网上有很多解释说明
+    &lt;blockquote&gt;
+      &lt;p&gt;?、*、{n}、{n,}、{n,m}、+、\b、^、$&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th align=&quot;left&quot;&gt;元字符&lt;/th&gt;
+            &lt;th align=&quot;left&quot;&gt;解释&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;*&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配 0 到多个元字符，相当于 {0,} 
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;?&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配 0 到 1 个元字符，相当于 {0,1}
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;{n}&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配 n 个元字符
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;{n,}&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配至少 n 个元字符
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;{n,m}&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配 n 到 m 个元字符
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;+&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配至少 1 个元字符，相当于 {1,}
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;\b&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                匹配单词边界
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;^&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                字符串必须以指定的字符开始
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;$&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                字符串必须以指定的字符结束
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h5 id=&quot;说明&quot;&gt;说明：&lt;/h5&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;由于在正则表达式中“ \ ”、“ ? ”、“ * ”、“ ^ ”、“ $ ”、“ + ”、“（”、“）”、“&lt;/td&gt;
+          &lt;td&gt;”、“ { ”、“ [ ”等字符已经具有一定特殊意义，如果需要用它们的原始意义，则应该对它进行转义，例如希望在字符串中至少有一个“ \ ”，那么正则表达式应该这么写： \+ 。&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;可以将多个元字符或者原义文本字符用括号括起来形成一个分组，比如 ^(13)[4-9]\d{8}$ 表示任意以 13 开头的移动手机号码。&lt;/li&gt;
+  &lt;li&gt;另外对于中文字符的匹配是采用其对应的 Unicode 编码来匹配的，对于单个 Unicode 字符，如 \u4e00 表示汉字“一”， \u9fa5 表示汉字“龥”，在 Unicode 编码中这分别是所能表示的汉字的第一个和最后一个的 Unicode 编码，在 Unicode 编码中能表示 20901 个汉字。&lt;/li&gt;
+  &lt;li&gt;关于 \b 的用法，它代表单词的开始或者结尾，以字符串“ 123a 345b 456 789d ”作为示例字符串，如果正则表达式是“ \b\d{3}\b ”，则仅能匹配 456 。
+可以使用“ | ”来表示或的关系，例如 [z|j|q] 表示匹配 z 、 j 、 q 之中的任意一个字母。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;需要注意----这几个元字符其它元字符都可以在手册中查到&quot;&gt;需要注意: () [] {} 这几个元字符，其它元字符都可以在手册中查到&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;**()**&lt;/code&gt; 是把括号内看做一个单一的组。
+    &lt;blockquote&gt;
+      &lt;p&gt;例如：要匹配URL是 .com .cn .net 。这时 () 是最好的选择 &lt;code style=&quot;color:red;&quot;&gt;(com|cn|net)&lt;/code&gt; 匹配到 com或cn或net&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;**[]**&lt;/code&gt; 方括号是单个匹配的。与()括号有所不同&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;例如：&lt;code style=&quot;color:red;&quot;&gt;[abc]&lt;/code&gt; 他匹配不是abc连续出现，而是只能其中一个，这样的规则匹配的是这个位置时，只能是abc其中一个。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;**{}**&lt;/code&gt; 大括号的用法很简单，就是匹配次数，它需要和其他有意义的正则表达式一起使用。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;例如：&lt;code style=&quot;color:red;&quot;&gt;[a-c]{2}&lt;/code&gt;意思就是匹配a-c之间的一个字母出现且只出现两次；&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;注意几个转义字符&quot;&gt;注意几个转义字符&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;tesh\\.php&lt;/code&gt; 匹配 tesh.php&lt;/li&gt;
+  &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;c:\\\\windows&lt;/code&gt; 匹配 c:\windows&lt;/li&gt;
+  &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;2\\^8&lt;/code&gt; 匹配 2^8&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;要匹配&lt;code style=&quot;color:red;&quot;&gt;hello \$ word!&lt;/code&gt;中的“\$”正则应该怎么写？preg_match函数&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    $str = 'hello \$ word!';
+    $str = preg_match_all(&quot;/\\\\\\\$/&quot;, $str, $matchs);
+    $str = preg_match_all(‘/\\\\\$/’, $str, $matchs);
+    print_r($mathchs);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;用双引号6或7个，双引号会解析引号内的内容&lt;/li&gt;
+  &lt;li&gt;用单引号6或5个&lt;/li&gt;
+  &lt;li&gt;用echo分别用单引双引输出”\\\$“会输出什么&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;多选结构&quot;&gt;多选结构&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Windows98&lt;/td&gt;
+          &lt;td&gt;Windows2000&lt;/td&gt;
+          &lt;td&gt;WindosXP&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;^Windows98&lt;/td&gt;
+          &lt;td&gt;Windows2000&lt;/td&gt;
+          &lt;td&gt;WindowsXP$&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Windows(98&lt;/td&gt;
+          &lt;td&gt;2000&lt;/td&gt;
+          &lt;td&gt;XP)&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;说明-1&quot;&gt;说明：&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;元字符&lt;code style=&quot;color:red;&quot;&gt;|&lt;/code&gt; 是表达式之间的或，和[]的区别就是一个是表达式间的一个是字符间的。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;上图一看便知&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/AB26023A8D2741839D9BCE195FF1BD8B/3924&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;这个没什么说的很好理解&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/7C72FB84066F4603A0759EF11EF62B25/3927&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;必须以com开始，必须以cn结束，含有net字符&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/47BD9CF04118441C9D25DDB066047735/3937&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code style=&quot;color:red;font-size:18px;&quot;&gt;多选结构可以包括很多字符，但不能超越括号的界限。&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;分组&quot;&gt;分组&lt;/h4&gt;
+
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th align=&quot;left&quot;&gt;元字符&lt;/th&gt;
+            &lt;th align=&quot;left&quot;&gt;解释&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;X ?&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                X ，一次或一次也没有
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;X *&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                X ，零次或多次
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;X +&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                X ，一次或多次
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;X { n }&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                X ，恰好 n 次
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;X { n ,}&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                X ，至少 n 次
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;
+                &lt;code style=&quot;color:red&quot;&gt;X { n , m }&lt;/code&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+                X ，至少 n 次，但是不超过 m 次
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;先来看第一个作用，对于IP地址的匹配，简单的可以写为如下形式：&lt;/p&gt;
+
+    &lt;p&gt;&lt;code style=&quot;color:red&quot;&gt;\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;但仔细观察，我们可以发现一定的规律，可以把.\d{1,3}看成一个整体，也就是把他们看成一组，再把这个组重复3次即可。表达式如下：&lt;/p&gt;
+
+    &lt;p&gt;&lt;code style=&quot;color:red&quot;&gt;\d{1,3}(.\d{1,3}){3}&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;这样一看，就比较简洁了。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;后向引用&quot;&gt;后向引用&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;后向引用&lt;/strong&gt;用于重复搜索前面某个分组匹配的文本。例如，\1 代表分组1匹配的文本。&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;默认情况下，每个分组会自动拥有一个组号，规则是：从左向右，以分组的左括号为标志，第一个出现的分组的组号为1，第二个为2，以此类推。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;下面是匹配连续出现的相同单词
+&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/BB7344ADEBB542C1A9EB9BFA97E1034B/3956&quot; alt=&quot;image&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;环视零宽断言&quot;&gt;环视【零宽断言】&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;顺序
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code style=&quot;color:red&quot;&gt;(?=exp)&lt;/code&gt;位置的后面能匹配exp 。例如： (?=\d)当前位置右边是数字。&lt;/li&gt;
+      &lt;li&gt;&lt;code style=&quot;color:red&quot;&gt;(?!exp)&lt;/code&gt;位置的后面不能匹配exp 。例如： (?!\d)当前位置右边不是数字。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;逆序
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code style=&quot;color:red&quot;&gt;(?&amp;lt;=exp)&lt;/code&gt;位置的前面能匹配exp。例如： (?&amp;lt;=\d)当前位置左边是数字。&lt;/li&gt;
+      &lt;li&gt;&lt;code style=&quot;color:red&quot;&gt;(?&amp;lt;!exp)&lt;/code&gt;位置的前面不能匹配exp 。例如： (?!\d)当前位置左边不是数字。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;看这些定义就烦看图吧！
+&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/7CC4634803704F47AF1EA347DD599340/3971&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/F3669AB112DE4D4B9E48510C2FD25B83/3975&quot; alt=&quot;image&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;这就很好理解了！&lt;code style=&quot;color:red&quot;&gt;?&lt;/code&gt; 指的就是某个被匹配的位置。在我理解所谓的’顺序’和’逆序’就是 &lt;strong&gt;位置&lt;/strong&gt;的左边或右边；&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;示例&quot;&gt;示例&lt;/h5&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;把1234567890变成1,234,567,890&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果理解了环视，看这个感觉很简单，从右边开始3个数字一个位置就OK拉&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/E7D2AC553D8D4CEE96D64CBD2632D238/3989&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;但不知你发现没有这个正则是有问题的！把结尾的0去掉会发生什么！完善后结果如下：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/ABF30FBA4ED1467DADBA5C1A611F20AC/3991&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;贪婪与懒惰匹配优先与忽略优先&quot;&gt;贪婪与懒惰（匹配优先与忽略优先）&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;贪婪&lt;/strong&gt;是尽可能匹配&lt;strong&gt;多&lt;/strong&gt;的字符&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;懒惰&lt;/strong&gt;是尽可能匹配&lt;strong&gt;少&lt;/strong&gt;的字符&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/D1B52AF893BF4D4493C1FA9633809818/4013&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/79741E81B2B840218861916132488F6B/4015&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;正则的引擎&quot;&gt;正则的引擎&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;DFA&lt;/strong&gt;表达式主导&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;NFA&lt;/strong&gt;文本主导
+    &lt;blockquote&gt;
+      &lt;p&gt;从主导这两字个就不难理解。&lt;br /&gt;
+&lt;strong&gt;NFA&lt;/strong&gt;是拿着表达式去匹配文本,表达式去看文本里是否有命中，以表达式为主。&lt;br /&gt; &lt;strong&gt;DFA&lt;/strong&gt;相反，文本拿每一个字符去看表达式是否有命中，以文本为主。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code style=&quot;color:red;font-size:18px;&quot;&gt;DFA引擎则搜索更快一些。但是NFA以表达式为主导，更容易操纵，因此一般程序员更偏爱NFA引擎！
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;如何判断当前程序使用的引擎&quot;&gt;如何判断当前程序使用的引擎&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;是否支持忽略优先量词和分组捕获？
+    &lt;ul&gt;
+      &lt;li&gt;支持  NFA&lt;/li&gt;
+      &lt;li&gt;不支持 DFA&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;回溯&quot;&gt;回溯&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;可参考文章：http://blog.csdn.net/secretx/article/details/72844509&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;简单阐述回溯&quot;&gt;简单阐述回溯&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;表达式&lt;code style=&quot;color:red;&quot;&gt;/^(a*)ab/&lt;/code&gt;,匹配字符串aaaaab。
+    &lt;ol&gt;
+      &lt;li&gt;匹配开始 &lt;code style=&quot;color:red;&quot;&gt;(a*)&lt;/code&gt; 捕获尽可能多的字符 &lt;code style=&quot;color:red;&quot;&gt;a&lt;/code&gt;。&lt;/li&gt;
+      &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;(a*)&lt;/code&gt; 一直捕获，直到遇到字符 &lt;code style=&quot;color:red;&quot;&gt;b&lt;/code&gt;。这时 &lt;code style=&quot;color:red;&quot;&gt;(a*)&lt;/code&gt; 已经捕获了 &lt;code style=&quot;color:red;&quot;&gt;aaaaa&lt;/code&gt;。&lt;/li&gt;
+      &lt;li&gt;正则表达式继续执行 &lt;code style=&quot;color:red;&quot;&gt;(a*)&lt;/code&gt; 之后的 &lt;code style=&quot;color:red;&quot;&gt;ab&lt;/code&gt; 匹配。但此时由于字符串仅剩一个 &lt;code style=&quot;color:red;&quot;&gt;b&lt;/code&gt; 字符。导致无法完成匹配。&lt;/li&gt;
+      &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;(a*)&lt;/code&gt; 从已捕获的字符串中“吐”出一个字符 &lt;code style=&quot;color:red;&quot;&gt;a&lt;/code&gt;。这时捕获结果为 &lt;code style=&quot;color:red;&quot;&gt;aaaa&lt;/code&gt;，剩余字符串为 &lt;code style=&quot;color:red;&quot;&gt;ab&lt;/code&gt;。
+重新执行正则中 &lt;code style=&quot;color:red;&quot;&gt;ab&lt;/code&gt;的匹配。发现正好与剩余字符串匹配。整个匹配过程结束。返回捕获结果 &lt;code style=&quot;color:red;&quot;&gt;aaaa&lt;/code&gt;。&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;从第3，4步可以看到，暂时的无法匹配并不会立即导致整体匹配失败。而是会从捕获组中“吐出”字符以尝试。这个“吐出”的过程就叫&lt;code style=&quot;color:red;&quot;&gt;**回溯**&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;回溯并不仅执行一次，而是会一直回溯到另一个极端。对于 &lt;code style=&quot;color:red;&quot;&gt;*&lt;/code&gt; 符号而言，就是匹配 0 次的情况。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;简单阐述悲观回溯&quot;&gt;简单阐述悲观回溯&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;表达式&lt;code style=&quot;color:red;&quot;&gt;/^(a*)b/&lt;/code&gt;,匹配字符串aaaaa&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code style=&quot;color:red;&quot;&gt;(a*)&lt;/code&gt; 首先匹配了所有 &lt;code style=&quot;color:red;&quot;&gt;aaaaa&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;尝试匹配 &lt;code style=&quot;color:red;&quot;&gt;b&lt;/code&gt;。但是匹配失败。&lt;/li&gt;
+  &lt;li&gt;回溯 1 个字符。此时剩余字符串为 &lt;code style=&quot;color:red;&quot;&gt;a&lt;/code&gt;。依然无法匹配字符 &lt;code style=&quot;color:red;&quot;&gt;b&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;回溯一直进行。直到匹配 0 次的情况。此时剩余字符串为 &lt;code style=&quot;color:red;&quot;&gt;aaaaa&lt;/code&gt;。依然无法匹配 &lt;code style=&quot;color:red;&quot;&gt;b&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;所有的可能性均已尝试过，依然无法匹配。最终导致整体匹配失败。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;可以看到，虽然我们可以一眼看出二者无法匹配。但正则表达式在执行时还要“傻傻的”逐一回溯所有可能性，才能确定最终结果。这个“傻傻的”回溯过程就叫&lt;code style=&quot;color:red;&quot;&gt;**悲观回溯**&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;表达式优化&quot;&gt;表达式优化&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;看课件 60页&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pcre的主要函数&quot;&gt;PCRE的主要函数&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;preg_grep — 返回匹配模式的数组条目&lt;/li&gt;
+  &lt;li&gt;preg_match — 执行一个正则表达式匹配&lt;/li&gt;
+  &lt;li&gt;preg_match_all — 执行一个全局正则表达式匹配&lt;/li&gt;
+  &lt;li&gt;preg_filter — 执行一个正则表达式搜索和替换&lt;/li&gt;
+  &lt;li&gt;preg_replace — 执行一个正则表达式的搜索和替换&lt;/li&gt;
+  &lt;li&gt;preg_replace_callback — 执行搜索并且使用一个回调进行替换&lt;/li&gt;
+  &lt;li&gt;preg_split — 通过一个正则表达式分隔字符串&lt;/li&gt;
+  &lt;li&gt;preg_quote — 转义正则表达式字符&lt;/li&gt;
+  &lt;li&gt;preg_last_error — 返回最后一个PCRE正则执行产生的错误代码&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 24 Jan 2018 00:00:00 +0800</pubDate>
+        <link>/2018/01/%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+        <guid isPermaLink="true">/2018/01/%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Vimium常用快捷键</title>

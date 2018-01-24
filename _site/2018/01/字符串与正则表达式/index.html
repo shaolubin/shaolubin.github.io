@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>字符串与正则表达式</title>
+  <meta name="description" content="字符串">
+  <meta name="author" content="leopardpan">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="字符串与正则表达式">
+  <meta name="twitter:description" content="字符串">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="字符串与正则表达式">
+  <meta property="og:description" content="字符串">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="/2018/01/%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+  <link rel="alternate" type="application/rss+xml" title="邵路滨" href="/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+
+<!-- 站点统计 -->
+  <script 
+  async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">、
+  </script>  
+
+<!-- 百度统计 -->
+  
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?3c59635aa275e0688b636159ea760f94";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+  
+
+<!-- google 统计 -->
+  
+
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">        
+      <div class="nav_container">
+         <nav class="nav-menu-item" style = "float:right">
+            <i class="nav-menu-item">
+              <a href="/#blog" title="" class="blog-button">  博客主页
+              </a>
+            </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/archive" title="archive" class="btn-mobile-menu__icon">
+                      所有文章
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/tags" title="tags" class="btn-mobile-menu__icon">
+                      标签
+                  </a>
+                </i>
+            
+                <i class="nav-menu-item">
+
+                  <a href="/about" title="about" class="btn-mobile-menu__icon">
+                      关于我
+                  </a>
+                </i>
+            
+          </nav>
+      </div>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 邵路滨 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            
+                        </h2>
+                        <p>
+                           
+                                PHP / Linux
+                            
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for 邵路滨" class="blog-button">邵路滨</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">个人站</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">欢迎来到我的个人站~</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">博客主页</a></li>
+                
+                  <li class="navigation__item"><a href="/archive" title="archive">所有文章</a></li>
+                
+                  <li class="navigation__item"><a href="/tags" title="tags">标签</a></li>
+                
+                  <li class="navigation__item"><a href="/about" title="about">关于我</a></li>
+                
+              </ul>
+            </nav>
+          </div>          
+        </div>
+
+
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-clear"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">字符串与正则表达式</h1>
+    <div class="post-meta">
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2018-01-24 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2018-01-24</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    <h2 id="字符串">字符串</h2>
+
+<h4 id="单引号和双引号的区别是">单引号和双引号的区别是？</h4>
+<ul>
+  <li>
+    <p>双引号会解析内部变量转义等，单引号只会把它当做普通字符，因此单引比双引效率高。</p>
+
+    <p>echo “this is a pen \n,this is a pen.”;//输出：解析换行
+echo ‘this is a pen, \nthis is a pen.’;//输出：this is a pen, \nthis is a pen.
+echo “\101\102”;//输出：AB
+echo ‘\x41\x42’;//输出：\x41\x42</p>
+  </li>
+</ul>
+
+<h4 id="常见函数是单字节处理方式">常见函数是单字节处理方式</h4>
+
+<ul>
+  <li>可以用[]或{}来访问某个字符</li>
+  <li>一个字符用一个字节标识,是一个ascii码,存储在内存中也是一个字节，双字节字符串就是unicode字符串,不论数字,英文,还是其他字符都用2个字节标识,大大提高了字符串的兼容性。Unicode（统一码、万国码、单一码）</li>
+</ul>
+
+<h4 id="php字符串是二进制安全">PHP字符串是二进制安全</h4>
+<ul>
+  <li>
+    <p>PHP是基于C语言写的。在C语言里【\0】相当与字符串的结束。PHP会通过len来检测字符串长度。如下例</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>#底层C语言表示PHP字符串
+struct{
+    char *val;
+    int  len;
+}str;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>举例说明</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>//C语言中
+main(){  
+    char ab[] = "aa\0b";  
+    char ac[] = "aa\0c";  
+    printf("%d\n", strcmp(ab, ac));  
+    printf("%d\n", strlen(ab));  
+ } 
+     
+//结果：0   2
+//解析：C语言认为ab和ac相等的，而且长度是2
+
+//PHP中
+$ab = "aa\0b";   
+$ac = "aa\0c";  
+var_dump(strcmp($ab, $ac));  
+var_dump(strlen($ab));  
+    
+//结果：-1  4
+//解析：PHP认为不相等，而且长度是4 &gt;   strcmp — 二进制安全字符串比较。字符串对比长度strlen&lt;br&gt; 左&gt;右 返回: 大于长度值【&gt;0的int值】&lt;br&gt; 左&lt;dk 返回：小于长度值【&lt;0的int值负数】
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>原因可想而知，只要还是在len上面！C语言遇到【\0】已经结束了，不会在继续对比下去。</p>
+  </li>
+</ul>
+
+<h4 id="存取和修改字符串中的字符">存取和修改字符串中的字符</h4>
+<ul>
+  <li>string 中的字符可以通过一个从 0 开始的下标，用类似 array 结构中的方括号包含对应的数字来访问和修改，比如 $str[42]。
+    <div class="language-php highlighter-rouge"><pre class="highlight"><code>//通过[]和{}访问string
+$str = "abcdefg";
+    
+var_dump($str{0});//输出string(1) "a"
+var_dump($str[1]);//输出string(1) "b"
+</code></pre>
+    </div>
+  </li>
+  <li>用超出字符串长度的下标写入将会拉长该字符串并以空格填充。
+    <div class="language-php highlighter-rouge"><pre class="highlight"><code>$str     = 'a';
+$str[10] = 'b';
+//输出string(11) "a         b"
+</code></pre>
+    </div>
+  </li>
+  <li>非整数类型下标会被转换成整数。非法下标类型会产生一个 E_NOTICE 级别错误
+    <div class="language-php highlighter-rouge"><pre class="highlight"><code>$str     = 'abcdef';
+var_dump($str[-2]);//输出string(1) "e"
+var_dump($str['aaa']);//报warning错，输出：string(1) "a"
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h4 id="php值转成string来保存几种方法串行化">PHP值转成string来保存几种方法【串行化】</h4>
+<ol>
+  <li>函数 serialize() 可以实现【序列化】</li>
+  <li>函数 json_encode ()可以实现</li>
+  <li>函数 var_export($items, true);</li>
+</ol>
+
+<ul>
+  <li>常用到json_encode()。
+    <blockquote>
+      <p>serialize和json_encode对比 <br />
+serialize可以转对象，unserizlize反序列化能直接生成对象
+json_encode相对转的快一点，但不明显。
+json_encode转成格式更通用一些</p>
+    </blockquote>
+  </li>
+</ul>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>$arr = [1,2,3,4];
+$str = var_export($arr);
+$str = '<span class="cp">&lt;?php</span> <span class="k">return</span> <span class="s1">'.$str;
+file_pubcontents('</span><span class="nx">text</span><span class="err">'</span><span class="p">,</span> <span class="nv">$str</span><span class="p">);</span>
+
+<span class="k">echo</span> <span class="nv">$str</span><span class="p">;</span>
+<span class="c1">//输出
+</span><span class="k">array</span> <span class="p">(</span>
+  <span class="mi">0</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="mi">1</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="mi">2</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="mi">3</span> <span class="o">=&gt;</span> <span class="mi">4</span><span class="p">,</span>
+<span class="p">);</span>
+</code></pre>
+</div>
+
+<h4 id="字符编码">字符编码</h4>
+
+<ul>
+  <li><strong>字符集</strong>：抽象字符集合</li>
+  <li><strong>字符编码</strong>：二进制的数字来对应字符集的字符</li>
+  <li><strong>ASCLL</strong>： 使用7位，表示一个字符，共128字符</li>
+  <li>在mysql中 Latin1 是 ISO-8859-1 的别名</li>
+  <li><strong>Unicode字符集</strong>，UTF-32/UTF-16/UTF-8是三种编码方案</li>
+  <li><strong>GB2312字符集</strong>：一个汉字用两个字节表示，每个字节只能有94个编码。双七位实际能够表示的字数是：94×94＝8836个。</li>
+  <li>
+    <p>UTF-8中汉字中占三个字节</p>
+  </li>
+  <li>ASCLL：https://baike.baidu.com/item/ASCII/309296?fr=aladdin</li>
+  <li>
+    <p>unicode：https://baike.baidu.com/item/Unicode%E7%A0%81/7704811?fr=aladdin</p>
+  </li>
+  <li>如何判断utf和gbk</li>
+</ul>
+
+<h4 id="获取汉字unicode码">获取汉字Unicode码</h4>
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>    $str='牛';
+    echo getUnicode($str);//输出：725b
+    function getUnicode($str){
+        $bin='';
+        $bin.=substr(decbin(ord($str[0])),4);
+        $bin.=substr(decbin(ord($str[1])),2);
+        $bin.=substr(decbin(ord($str[2])),2);
+        return dechex(bindec($bin));
+    }
+</code></pre>
+</div>
+
+<h2 id="自总结">自总结</h2>
+<ul>
+  <li>字符最小单位【位(bit)】，只有0和1,代表着低电和高电压。字节是由8个位组成，unicode为每个字符设定了唯一的二进制编码！在通过不同的字符编码规则显示相就不字符。</li>
+</ul>
+
+<h2 id="正则表达式">正则表达式</h2>
+<h4 id="正则基础">正则基础</h4>
+<ul>
+  <li>正则表达式：是由 <strong>元字符</strong> 和 <strong>文本</strong> 组成的</li>
+  <li>常见元字符
+    <blockquote>
+      <p>正则表达式语言由两种基本字符类型组成：原义（正常）文本字符和元字符。元字符使正则表达式具有处理能力。元字符既可以是放在 [] 中的任意单个字符（如 [a] 表示匹配单个小写字符 a ），也可以是字符序列（如 [a-d] 表示匹配 a 、 b 、 c 、 d 之间的任意一个字符，而 \w 表示任意英文字母和数字及下划线）</p>
+    </blockquote>
+  </li>
+</ul>
+
+<table>
+    <thead>
+        <tr>
+            <th align="left">元字符</th>
+            <th align="left">解释</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <code style="color:red">.</code>
+            </td>
+            <td>
+                匹配除换行符以外的任意字符
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">\w</code>
+            </td>
+            <td>
+                匹配字母或数字
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">\s</code>
+            </td>
+            <td>
+                匹配任意的空白符
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">\d</code>
+            </td>
+            <td>
+                匹配数字
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">\b</code>
+            </td>
+            <td>
+                匹配单词的开始或结束
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">^</code>
+            </td>
+            <td>
+                匹配字符串的开始
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">$</code>
+            </td>
+            <td>
+                匹配字符串的结束
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">\xxx</code>
+            </td>
+            <td>
+                查找以八进制数 xxx 规定的字符
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">\xdd</code>
+            </td>
+            <td>
+                查找以十六进制数 dd 规定的字符
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">\uxxxx</code>
+            </td>
+            <td>
+                查找以十六进制数 xxxx 规定的 Unicode 字符
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>元字符表：http://tool.oschina.net/uploads/apidocs/jquery/regexp.html</p>
+  </li>
+  <li>
+    <p>正则测试：http://regex.zjmainstay.cn</p>
+  </li>
+</ul>
+
+<h4 id="限定符">限定符</h4>
+<ul>
+  <li>网上有很多解释说明
+    <blockquote>
+      <p>?、*、{n}、{n,}、{n,m}、+、\b、^、$</p>
+    </blockquote>
+  </li>
+</ul>
+
+<table>
+    <thead>
+        <tr>
+            <th align="left">元字符</th>
+            <th align="left">解释</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <code style="color:red">*</code>
+            </td>
+            <td>
+                匹配 0 到多个元字符，相当于 {0,} 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">?</code>
+            </td>
+            <td>
+                匹配 0 到 1 个元字符，相当于 {0,1}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">{n}</code>
+            </td>
+            <td>
+                匹配 n 个元字符
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">{n,}</code>
+            </td>
+            <td>
+                匹配至少 n 个元字符
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">{n,m}</code>
+            </td>
+            <td>
+                匹配 n 到 m 个元字符
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">+</code>
+            </td>
+            <td>
+                匹配至少 1 个元字符，相当于 {1,}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">\b</code>
+            </td>
+            <td>
+                匹配单词边界
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">^</code>
+            </td>
+            <td>
+                字符串必须以指定的字符开始
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">$</code>
+            </td>
+            <td>
+                字符串必须以指定的字符结束
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h5 id="说明">说明：</h5>
+<ol>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>由于在正则表达式中“ \ ”、“ ? ”、“ * ”、“ ^ ”、“ $ ”、“ + ”、“（”、“）”、“</td>
+          <td>”、“ { ”、“ [ ”等字符已经具有一定特殊意义，如果需要用它们的原始意义，则应该对它进行转义，例如希望在字符串中至少有一个“ \ ”，那么正则表达式应该这么写： \+ 。</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>可以将多个元字符或者原义文本字符用括号括起来形成一个分组，比如 ^(13)[4-9]\d{8}$ 表示任意以 13 开头的移动手机号码。</li>
+  <li>另外对于中文字符的匹配是采用其对应的 Unicode 编码来匹配的，对于单个 Unicode 字符，如 \u4e00 表示汉字“一”， \u9fa5 表示汉字“龥”，在 Unicode 编码中这分别是所能表示的汉字的第一个和最后一个的 Unicode 编码，在 Unicode 编码中能表示 20901 个汉字。</li>
+  <li>关于 \b 的用法，它代表单词的开始或者结尾，以字符串“ 123a 345b 456 789d ”作为示例字符串，如果正则表达式是“ \b\d{3}\b ”，则仅能匹配 456 。
+可以使用“ | ”来表示或的关系，例如 [z|j|q] 表示匹配 z 、 j 、 q 之中的任意一个字母。</li>
+</ol>
+
+<h5 id="需要注意----这几个元字符其它元字符都可以在手册中查到">需要注意: () [] {} 这几个元字符，其它元字符都可以在手册中查到</h5>
+
+<ul>
+  <li><code style="color:red;">**()**</code> 是把括号内看做一个单一的组。
+    <blockquote>
+      <p>例如：要匹配URL是 .com .cn .net 。这时 () 是最好的选择 <code style="color:red;">(com|cn|net)</code> 匹配到 com或cn或net</p>
+    </blockquote>
+  </li>
+  <li><code style="color:red;">**[]**</code> 方括号是单个匹配的。与()括号有所不同</li>
+</ul>
+
+<blockquote>
+  <p>例如：<code style="color:red;">[abc]</code> 他匹配不是abc连续出现，而是只能其中一个，这样的规则匹配的是这个位置时，只能是abc其中一个。</p>
+</blockquote>
+
+<ul>
+  <li><code style="color:red;">**{}**</code> 大括号的用法很简单，就是匹配次数，它需要和其他有意义的正则表达式一起使用。</li>
+</ul>
+
+<blockquote>
+  <p>例如：<code style="color:red;">[a-c]{2}</code>意思就是匹配a-c之间的一个字母出现且只出现两次；</p>
+</blockquote>
+
+<h4 id="注意几个转义字符">注意几个转义字符</h4>
+<ol>
+  <li><code style="color:red;">tesh\\.php</code> 匹配 tesh.php</li>
+  <li><code style="color:red;">c:\\\\windows</code> 匹配 c:\windows</li>
+  <li><code style="color:red;">2\\^8</code> 匹配 2^8</li>
+</ol>
+
+<ul>
+  <li>要匹配<code style="color:red;">hello \$ word!</code>中的“\$”正则应该怎么写？preg_match函数</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code>    $str = 'hello \$ word!';
+    $str = preg_match_all("/\\\\\\\$/", $str, $matchs);
+    $str = preg_match_all(‘/\\\\\$/’, $str, $matchs);
+    print_r($mathchs);
+</code></pre>
+</div>
+
+<ul>
+  <li>用双引号6或7个，双引号会解析引号内的内容</li>
+  <li>用单引号6或5个</li>
+  <li>用echo分别用单引双引输出”\\\$“会输出什么</li>
+</ul>
+
+<h4 id="多选结构">多选结构</h4>
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Windows98</td>
+          <td>Windows2000</td>
+          <td>WindosXP</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>^Windows98</td>
+          <td>Windows2000</td>
+          <td>WindowsXP$</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Windows(98</td>
+          <td>2000</td>
+          <td>XP)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h5 id="说明-1">说明：</h5>
+<ul>
+  <li>
+    <p>元字符<code style="color:red;">|</code> 是表达式之间的或，和[]的区别就是一个是表达式间的一个是字符间的。</p>
+  </li>
+  <li>
+    <p>上图一看便知</p>
+  </li>
+</ul>
+
+<p><img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/AB26023A8D2741839D9BCE195FF1BD8B/3924" alt="image" /></p>
+<blockquote>
+  <p>这个没什么说的很好理解</p>
+</blockquote>
+
+<p><img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/7C72FB84066F4603A0759EF11EF62B25/3927" alt="image" /></p>
+<blockquote>
+  <p>必须以com开始，必须以cn结束，含有net字符</p>
+</blockquote>
+
+<p><img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/47BD9CF04118441C9D25DDB066047735/3937" alt="image" /></p>
+
+<p><code style="color:red;font-size:18px;">多选结构可以包括很多字符，但不能超越括号的界限。</code></p>
+
+<h4 id="分组">分组</h4>
+
+<table>
+    <thead>
+        <tr>
+            <th align="left">元字符</th>
+            <th align="left">解释</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <code style="color:red">X ?</code>
+            </td>
+            <td>
+                X ，一次或一次也没有
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">X *</code>
+            </td>
+            <td>
+                X ，零次或多次
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">X +</code>
+            </td>
+            <td>
+                X ，一次或多次
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">X { n }</code>
+            </td>
+            <td>
+                X ，恰好 n 次
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">X { n ,}</code>
+            </td>
+            <td>
+                X ，至少 n 次
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code style="color:red">X { n , m }</code>
+            </td>
+            <td>
+                X ，至少 n 次，但是不超过 m 次
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ul>
+  <li>
+    <p>先来看第一个作用，对于IP地址的匹配，简单的可以写为如下形式：</p>
+
+    <p><code style="color:red">\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}</code></p>
+  </li>
+  <li>
+    <p>但仔细观察，我们可以发现一定的规律，可以把.\d{1,3}看成一个整体，也就是把他们看成一组，再把这个组重复3次即可。表达式如下：</p>
+
+    <p><code style="color:red">\d{1,3}(.\d{1,3}){3}</code></p>
+  </li>
+  <li>
+    <p>这样一看，就比较简洁了。</p>
+  </li>
+</ul>
+
+<h4 id="后向引用">后向引用</h4>
+<ul>
+  <li><strong>后向引用</strong>用于重复搜索前面某个分组匹配的文本。例如，\1 代表分组1匹配的文本。</li>
+  <li>
+    <p>默认情况下，每个分组会自动拥有一个组号，规则是：从左向右，以分组的左括号为标志，第一个出现的分组的组号为1，第二个为2，以此类推。</p>
+  </li>
+  <li>下面是匹配连续出现的相同单词
+<img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/BB7344ADEBB542C1A9EB9BFA97E1034B/3956" alt="image" /></li>
+</ul>
+
+<h4 id="环视零宽断言">环视【零宽断言】</h4>
+<ol>
+  <li>顺序
+    <ul>
+      <li><code style="color:red">(?=exp)</code>位置的后面能匹配exp 。例如： (?=\d)当前位置右边是数字。</li>
+      <li><code style="color:red">(?!exp)</code>位置的后面不能匹配exp 。例如： (?!\d)当前位置右边不是数字。</li>
+    </ul>
+  </li>
+  <li>逆序
+    <ul>
+      <li><code style="color:red">(?&lt;=exp)</code>位置的前面能匹配exp。例如： (?&lt;=\d)当前位置左边是数字。</li>
+      <li><code style="color:red">(?&lt;!exp)</code>位置的前面不能匹配exp 。例如： (?!\d)当前位置左边不是数字。</li>
+    </ul>
+  </li>
+</ol>
+
+<ul>
+  <li>看这些定义就烦看图吧！
+<img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/7CC4634803704F47AF1EA347DD599340/3971" alt="image" />
+<img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/F3669AB112DE4D4B9E48510C2FD25B83/3975" alt="image" /></li>
+</ul>
+
+<blockquote>
+  <p>这就很好理解了！<code style="color:red">?</code> 指的就是某个被匹配的位置。在我理解所谓的’顺序’和’逆序’就是 <strong>位置</strong>的左边或右边；</p>
+</blockquote>
+
+<h5 id="示例">示例</h5>
+<ul>
+  <li>
+    <p>把1234567890变成1,234,567,890</p>
+  </li>
+  <li>
+    <p>如果理解了环视，看这个感觉很简单，从右边开始3个数字一个位置就OK拉</p>
+  </li>
+</ul>
+
+<p><img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/E7D2AC553D8D4CEE96D64CBD2632D238/3989" alt="image" /></p>
+
+<ul>
+  <li>但不知你发现没有这个正则是有问题的！把结尾的0去掉会发生什么！完善后结果如下：</li>
+</ul>
+
+<p><img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/ABF30FBA4ED1467DADBA5C1A611F20AC/3991" alt="image" /></p>
+
+<h4 id="贪婪与懒惰匹配优先与忽略优先">贪婪与懒惰（匹配优先与忽略优先）</h4>
+<ul>
+  <li><strong>贪婪</strong>是尽可能匹配<strong>多</strong>的字符</li>
+  <li><strong>懒惰</strong>是尽可能匹配<strong>少</strong>的字符</li>
+</ul>
+
+<p><img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/D1B52AF893BF4D4493C1FA9633809818/4013" alt="image" />
+<img src="https://note.youdao.com/yws/public/resource/f2c37c171ac4f8c398f0b2680bc2bfdb/xmlnote/79741E81B2B840218861916132488F6B/4015" alt="image" /></p>
+
+<h4 id="正则的引擎">正则的引擎</h4>
+<ol>
+  <li><strong>DFA</strong>表达式主导</li>
+  <li><strong>NFA</strong>文本主导
+    <blockquote>
+      <p>从主导这两字个就不难理解。<br />
+<strong>NFA</strong>是拿着表达式去匹配文本,表达式去看文本里是否有命中，以表达式为主。<br /> <strong>DFA</strong>相反，文本拿每一个字符去看表达式是否有命中，以文本为主。</p>
+    </blockquote>
+  </li>
+</ol>
+
+<p><code style="color:red;font-size:18px;">DFA引擎则搜索更快一些。但是NFA以表达式为主导，更容易操纵，因此一般程序员更偏爱NFA引擎！
+</code></p>
+
+<h4 id="如何判断当前程序使用的引擎">如何判断当前程序使用的引擎</h4>
+<ul>
+  <li>是否支持忽略优先量词和分组捕获？
+    <ul>
+      <li>支持  NFA</li>
+      <li>不支持 DFA</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="回溯">回溯</h2>
+<ul>
+  <li>可参考文章：http://blog.csdn.net/secretx/article/details/72844509</li>
+</ul>
+
+<h4 id="简单阐述回溯">简单阐述回溯</h4>
+<ul>
+  <li>表达式<code style="color:red;">/^(a*)ab/</code>,匹配字符串aaaaab。
+    <ol>
+      <li>匹配开始 <code style="color:red;">(a*)</code> 捕获尽可能多的字符 <code style="color:red;">a</code>。</li>
+      <li><code style="color:red;">(a*)</code> 一直捕获，直到遇到字符 <code style="color:red;">b</code>。这时 <code style="color:red;">(a*)</code> 已经捕获了 <code style="color:red;">aaaaa</code>。</li>
+      <li>正则表达式继续执行 <code style="color:red;">(a*)</code> 之后的 <code style="color:red;">ab</code> 匹配。但此时由于字符串仅剩一个 <code style="color:red;">b</code> 字符。导致无法完成匹配。</li>
+      <li><code style="color:red;">(a*)</code> 从已捕获的字符串中“吐”出一个字符 <code style="color:red;">a</code>。这时捕获结果为 <code style="color:red;">aaaa</code>，剩余字符串为 <code style="color:red;">ab</code>。
+重新执行正则中 <code style="color:red;">ab</code>的匹配。发现正好与剩余字符串匹配。整个匹配过程结束。返回捕获结果 <code style="color:red;">aaaa</code>。</li>
+    </ol>
+  </li>
+</ul>
+
+<blockquote>
+  <p>从第3，4步可以看到，暂时的无法匹配并不会立即导致整体匹配失败。而是会从捕获组中“吐出”字符以尝试。这个“吐出”的过程就叫<code style="color:red;">**回溯**</code>。</p>
+</blockquote>
+
+<blockquote>
+  <p>回溯并不仅执行一次，而是会一直回溯到另一个极端。对于 <code style="color:red;">*</code> 符号而言，就是匹配 0 次的情况。</p>
+</blockquote>
+
+<h4 id="简单阐述悲观回溯">简单阐述悲观回溯</h4>
+<ul>
+  <li>表达式<code style="color:red;">/^(a*)b/</code>,匹配字符串aaaaa</li>
+</ul>
+
+<ol>
+  <li><code style="color:red;">(a*)</code> 首先匹配了所有 <code style="color:red;">aaaaa</code>。</li>
+  <li>尝试匹配 <code style="color:red;">b</code>。但是匹配失败。</li>
+  <li>回溯 1 个字符。此时剩余字符串为 <code style="color:red;">a</code>。依然无法匹配字符 <code style="color:red;">b</code>。</li>
+  <li>回溯一直进行。直到匹配 0 次的情况。此时剩余字符串为 <code style="color:red;">aaaaa</code>。依然无法匹配 <code style="color:red;">b</code>。</li>
+  <li>所有的可能性均已尝试过，依然无法匹配。最终导致整体匹配失败。</li>
+</ol>
+
+<blockquote>
+  <p>可以看到，虽然我们可以一眼看出二者无法匹配。但正则表达式在执行时还要“傻傻的”逐一回溯所有可能性，才能确定最终结果。这个“傻傻的”回溯过程就叫<code style="color:red;">**悲观回溯**</code>。</p>
+</blockquote>
+
+<h2 id="表达式优化">表达式优化</h2>
+<ul>
+  <li>看课件 60页</li>
+</ul>
+
+<h2 id="pcre的主要函数">PCRE的主要函数</h2>
+<ul>
+  <li>preg_grep — 返回匹配模式的数组条目</li>
+  <li>preg_match — 执行一个正则表达式匹配</li>
+  <li>preg_match_all — 执行一个全局正则表达式匹配</li>
+  <li>preg_filter — 执行一个正则表达式搜索和替换</li>
+  <li>preg_replace — 执行一个正则表达式的搜索和替换</li>
+  <li>preg_replace_callback — 执行搜索并且使用一个回调进行替换</li>
+  <li>preg_split — 通过一个正则表达式分隔字符串</li>
+  <li>preg_quote — 转义正则表达式字符</li>
+  <li>preg_last_error — 返回最后一个PCRE正则执行产生的错误代码</li>
+</ul>
+
+
+  </section>
+</article>
+
+<section>
+
+            <div class="content-play">
+              <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">打赏一个呗</a></p>
+              <div class="hide_box-play"></div>
+              <div class="shang_box-play">
+                <a class="shang_close-play" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="/images/payimg/close.jpg" alt="取消" /></a>
+                <div class="shang_tit-play">
+                  <p>感谢您的支持，我会继续努力的!</p>
+                </div>
+                <div class="shang_payimg">
+                    <img src="/images/payimg/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+              <div class="shang_payimg">    
+                    <img src="/images/payimg/weipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                </div>
+                <div class="pay_explain">扫码打赏，你说多少就多少</div>
+                <div class="shang_payselect">
+                  <div class="pay_item checked" data-id="alipay">
+                    <span class="pay_logo"><img src="/images/payimg/alipay.jpg" alt="支付宝" /></span>
+                  </div>
+                  <div class="pay_item" data-id="weipay">
+                    <span class="pay_logo"><img src="/images/payimg/wechat.jpg" alt="微信" /></span>
+                  </div>
+                </div>
+                <div class="shang_info-play">
+                  <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+            function dashangToggle(){
+              $(".hide_box-play").fadeToggle();
+              $(".shang_box-play").fadeToggle();
+            }
+            </script>
+
+            <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';"></div>
+
+            <style type="text/css">
+              .content-play{width:80%;margin-top: 20px;margin-bottom: 10px;height:40px;}
+              .hide_box-play{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
+              .shang_box-play{width:540px;height:540px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
+              .shang_box-play img{border:none;border-width:0;}
+              .dashang{display:block;width:100px;margin:5px auto;height:25px;line-height:25px;padding:10px;background-color:#E74851;color:#fff;text-align:center;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;transition: all 0.3s;}
+              .dashang:hover{opacity:0.8;padding:15px;font-size:18px;}
+              .shang_close-play{float:right;display:inline-block;
+                margin-right: 10px;margin-top: 20px;
+              }
+              .shang_logo{display:block;text-align:center;margin:20px auto;}
+              .shang_tit-play{width: 100%;height: 75px;text-align: center;line-height: 66px;color: #a3a3a3;font-size: 16px;background: url('/images/payimg/cy-reward-title-bg.jpg');font-family: 'Microsoft YaHei';margin-top: 7px;margin-right:2px;}
+              .shang_tit-play p{color:#a3a3a3;text-align:center;font-size:16px;}
+              .shang_payimg{width:140px;padding:10px;padding-left: 80px; /*border:6px solid #EA5F00;**/margin:0 auto;border-radius:3px;height:140px;display:inline-block;}
+              .shang_payimg img{display:inline-block;margin-right:10px;float:left;text-align:center;width:140px;height:140px; }
+              .pay_explain{text-align:center;margin:10px auto;font-size:12px;color:#545454;}
+              .shang_payselect{text-align:center;margin:0 auto;margin-top:40px;cursor:pointer;height:60px;width:500px;margin-left:110px;}
+              .shang_payselect .pay_item{display:inline-block;margin-right:140px;float:left;}
+              .shang_info-play{clear:both;}
+              .shang_info-play p,.shang_info-play a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+            </style>
+
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2018/01/vimium%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" data-toggle="tooltip" data-placement="top" title="Vimium常用快捷键">上一篇：  <span>Vimium常用快捷键</span>
+            </a>
+        </li>
+        
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+
+    <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    <script>
+    var cloudTieConfig = {
+      url: document.location.href, 
+      sourceId: "",
+      productKey: "aa395cf7778f458492060f3f53301b7c",
+      target: "cloud-tie-wrapper"
+    };
+    var yunManualLoad = true;
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);
+    </script>
+
+
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+        <div class = "footer_div">  
+        <nav class="cover-navigation navigation--social">
+          <ul class="navigation">
+
+          
+          <!-- Weibo -->
+          <li class="navigation__item_social">
+            <a href="http://weibo.com/9792396" title="@9792396 的微博" target="_blank">
+              <i class='social fa fa-weibo fa-2x'></i>
+              <span class="label">Weibo</span>
+            </a>
+          </li>
+          
+
+          
+          
+          
+
+          
+
+          <!-- RSS -->
+          <li class="navigation__item_social">
+            <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+              <i class='social fa fa-rss fa-2x'></i>
+              <span class="label">RSS</span>
+            </a>
+          </li>
+
+          
+          <!-- Email -->
+          <li class="navigation__item_social">
+            <a href="mailto:9792396@qq.com" title="Contact me">
+              <i class='social fa fa-envelope fa-2x'></i>
+              <span class="label">Email</span>
+            </a>
+          </li>
+          
+
+          </ul>
+        </nav>
+
+        </div>
+
+        <div class = "footer_div">  
+           <p class="copyright text-muted">
+            Copyright &copy; 邵路滨 2018
+            <iframe
+                style="margin-left: 2px; margin-bottom:-5px;"
+                frameborder="0" scrolling="0" width="91px" height="20px"
+                src="https://ghbtns.com/github-btn.html?user=leopardpan&repo=leopardpan.github.io&type=star&count=true" >
+            </iframe>
+            </p>
+        	<div align="right">
+    			<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+          <!-- 访问统计 -->
+          <span id="busuanzi_container_site_pv">
+            本站总访问量
+            <span id="busuanzi_value_site_pv"></span>次
+          </span>
+
+        </div>
+        <div>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+  </body>
+
+</html>
